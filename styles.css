@@ -37,7 +37,7 @@
     background-color: var(--pastcolour);
 }
 .right {
-  background-color: var(--futurecolour);
+    background-color: var(--futurecolour);
 }
 .middle {
     background: linear-gradient(to right,var(--pastcolour),var(--futurecolour));
@@ -49,8 +49,21 @@
 }
 
 @keyframes pastfuture {
-    0% {transform: rotate(0deg);}
-    25% {transform: rotate(20deg)}
-    50% {transform: rotate(0deg); font-size: 5rem;}
-    75% {transform: rotate(-20deg)}
-    100% {transform: rotate(0deg)}}
+    45% {font-size: 5rem;}
+    55% {font-size: 5rem;}
+}
+
+.past {
+    background-color: var(--pastcolour);
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.textright {
+    padding-left: 60%;
+}
+.stack-lg > * + * {
+    margin-top: 2rem;
+}
+.stack-xl > * + * {
+    margin-top: 4rem;
+}
