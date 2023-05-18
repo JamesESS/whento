@@ -1,0 +1,32 @@
+<fieldset>
+            <legend>Whento?</legend>
+    
+            <input id="whento-past" type="radio" name="whento" value="past" checked onclick="toggle(`past-year`,this.id)"/>
+            <label for="whento-past" class="radio">Past (Travelling Tess)</label>
+    
+            <input id="whento-future" type="radio" name="whento" value="future" onclick="toggle(`future-year`,this.id)"/>
+            <label for="whento-future" class="radio">Future (Journeying James) </label>
+            <div id="past-year" style="display: none">
+                <label id="past-year" for="year">Year</label> 
+                <!-- make this only appear once you've selected past  -->
+                <input id="year" name="year" type="number" max="2023"/>
+            </div>
+            <div id="future-year" style="display: none">
+                <label id="future-year" for="year">Year</label> 
+                <!-- make this only appear once you've selected future  -->
+                <input id="year" name="year" type="number" min="2023"/>
+            </div>
+        </fieldset>
+
+
+        <script>
+            function toggle(elementId,btnid) {
+                document.getElementById("future-year").style.display = "none"
+                document.getElementById("past-year").style.display = "none"
+              const element = document.getElementById(elementId);
+              const btn = document.getElementById(btnid);
+              if (element.style.display == "none") {
+                element.style.display = "block";
+              } 
+            }
+          </script>
