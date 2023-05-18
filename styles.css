@@ -58,12 +58,20 @@
     padding-left: 15%;
     padding-right: 15%;
 }
+.future {
+    background-color: var(--futurecolour);
+    padding-left: 15%;
+    padding-right: 15%;
+}
 .textright {
-    padding-left: 60%;
+    padding-left: 50%;
+}
+.textleft {
+    padding-right: 50%;
 }
 .stack-lg > * + * {
-    margin-top: 2rem;
+    padding-top: 2rem;
 }
-.stack-xl > * + * {
-    margin-top: 4rem;
+.stack-xl > *  {
+    padding-top: 4rem;
 }
