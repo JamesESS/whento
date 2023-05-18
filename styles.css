@@ -1,3 +1,8 @@
+:root {
+    --pastcolour: rgb(101,219,219);
+    --futurecolour: rgb(144,105,203);
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -21,17 +26,32 @@
     margin-left: auto;
     margin-right: auto;
 }
+.fitcontent {
+    width: fit-content;
+}
 .centertext {
     text-align: center;
     line-height: 100vh;
 }
-.absolute {
-    position: absolute;
-
-}
 .left {
-    background-color: skyblue;
+    background-color: var(--pastcolour);
 }
 .right {
-    background-color: purple;
+    background-color: var(--futurecolour);
+}
+.middle {
+    background: linear-gradient(to right,var(--pastcolour),var(--futurecolour));
+}
+.hover:hover{
+    animation-name: pastfuture;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pastfuture {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(20deg)}
+    50% {transform: rotate(0deg); font-size: 5rem;}
+    75% {transform: rotate(-20deg)}
+    100% {transform: rotate(0deg)}
 }
