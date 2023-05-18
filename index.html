@@ -24,10 +24,11 @@
 
     <section class="centered"> 
         <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
-            <!-- <h1 id="addMovie">Add Movie</h1> -->
-            <input id="tab-1" type="radio" name="tab" class="futureForm" checked><label for="tab-1" class="tab">Future</label> 
-            <input id="tab-2" type="radio" name="tab" class="pastForm"><label for="tab-2" class="tab">Past</label>
-        
+            <div class="formHeader">
+                <button id="futureFormButton" type="button" style="width:5rem">Future</button>        
+                <button id="pastFormButton" type="button" style="width:5rem">Past</button>        
+            </div>
+
             <label for="name">Name</label>
             <input id="name" name="name" type="text" />
     
@@ -53,11 +54,11 @@
             <fieldset>
                 <legend>Pick your time expert</legend>
         
-                <input id="who-t" type="radio" name="who" value="t">
-                <label for="who" class="radio">Travelling Tess</label>
+                <input id="who-t" type="radio" name="who" value="t" checked/>
+                <label for="who-t" class="radio">Travelling Tess</label>
         
                 <input id="who-j" type="radio" name="who" value="j"/>
-                <label for="who" class="radio">Journeying James</label>
+                <label for="who-j" class="radio">Journeying James</label>
             </fieldset>
     
             <label for="message">Message</label>
@@ -66,7 +67,7 @@
             <input id="marketingConsent" name="marketingConsent" type="checkbox" />
             <label for="marketingConsent" class="checkbox">Give me updates on what year it is for you</label>
     
-            <button type="submit">Submit</button>
+            <button id="submit" type="submit">Submit</button>
       </form>
     </section>
 </body>

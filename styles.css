@@ -160,23 +160,14 @@ button:focus,
     box-shadow: 0 0 0 3px hsl(220, 70%, 70%);
 }
 
-.futureForm:checked + .tab, .pastForm:checked + .tab{
-    color: green;
-    border-color:green;
-    /* transform:rotate(0) */
-}
-
 input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
     display:none;
 }
 
-.tab{
-    /* font-size:22px; */
-    /* margin-right:15px; */
-    /* padding-bottom:5px; */
-    width: 100%;
-    margin:0 15px 10px 0;
-    display:inline-block;
-    border-bottom:2px solid transparent;
-    text-transform:uppercase;
-  }
+.formHeader{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    align-items: var(--align, center);
+    justify-content: center;
+}
