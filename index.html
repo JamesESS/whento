@@ -42,6 +42,76 @@
             </div>
 
             </div>
+            <section class="centered"> 
+                <!-- if james edited centered this could be problem -->
+                <form
+                id="form"
+                action="https://learn-forms.netlify.com/submit/part3"
+                method="GET">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" />
+          
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" />
+          
+                <label for="tel">Telephone</label>
+                <input id="tel" name="tel" type="tel" />
+          
+                <fieldset>
+                  <legend>Preferred contact method</legend>
+          
+                  <input id="contact-email" type="radio" name="contact" value="email" checked/>
+                  <label for="contact-email" class="radio">Email</label>
+          
+                  <input id="contact-tel" type="radio" name="contact" value="telephone" />
+                  <label for="contact-tel" class="radio">Telephone</label>
+          
+                  <input id="contact-futureself" type="radio" name="contact" value="futureself" />
+                  <label for="contact-futureself" class="radio">From your future self</label>
+                </fieldset>
+        
+                <fieldset>
+                    <legend>Whento?</legend>
+            
+                    <input id="whento-past" type="radio" name="whento" value="past" checked onclick="toggle(`past-year`,this.id)"/>
+                    <label for="whento-past" class="radio">Past (Travelling Tess)</label>
+            
+                    <input id="whento-future" type="radio" name="whento" value="future" onclick="toggle(`future-year`,this.id)"/>
+                    <label for="whento-future" class="radio">Future (Journeying James) </label>
+                    <div id="past-year" style="display: none">
+                        <label id="past-year" for="year">Year</label> 
+                        <!-- make this only appear once you've selected past  -->
+                        <input id="year" name="year" type="number" max="2023"/>
+                    </div>
+                    <div id="future-year" style="display: none">
+                        <label id="future-year" for="year">Year</label> 
+                        <!-- make this only appear once you've selected future  -->
+                        <input id="year" name="year" type="number" min="2023"/>
+                    </div>
+                </fieldset>
+          
+                <label for="message">Message</label>
+                <textarea name="message"></textarea>
+          
+                <input id="marketingConsent" name="marketingConsent" type="checkbox" />
+                <label for="marketingConsent" class="checkbox">Give me updates on what year it is for you</label>
+          
+                <button type="submit">Submit</button>
+              </form>
+            </section>
+        </body>
+        
+        <script>
+            function toggle(elementId,btnid) {
+                document.getElementById("future-year").style.display = "none"
+                document.getElementById("past-year").style.display = "none"
+              const element = document.getElementById(elementId);
+              const btn = document.getElementById(btnid);
+              if (element.style.display == "none") {
+                element.style.display = "block";
+              } 
+            }
+          </script>
     </main>
 </body>
 </html>
