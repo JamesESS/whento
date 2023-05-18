@@ -7,7 +7,7 @@
     <link href="styles.css" rel="stylesheet">
     <title>When To?</title>
 </head>
-<body>
+<body class="stack-xl">
     <header>       
             <span class="row spacearound maxheight">
                 <div class="container maxwidth centertext left">
@@ -21,75 +21,97 @@
                 </div>
             </span>
     </header>
-
-    <section class="centered"> 
-        <!-- if james edited centered this could be problem -->
-        <form
-        id="form"
-        action="https://learn-forms.netlify.com/submit/part3"
-        method="GET">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" />
-  
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" />
-  
-        <label for="tel">Telephone</label>
-        <input id="tel" name="tel" type="tel" />
-  
-        <fieldset>
-          <legend>Preferred contact method</legend>
-  
-          <input id="contact-email" type="radio" name="contact" value="email" checked/>
-          <label for="contact-email" class="radio">Email</label>
-  
-          <input id="contact-tel" type="radio" name="contact" value="telephone" />
-          <label for="contact-tel" class="radio">Telephone</label>
-  
-          <input id="contact-futureself" type="radio" name="contact" value="futureself" />
-          <label for="contact-futureself" class="radio">From your future self</label>
-        </fieldset>
-
-        <fieldset>
-            <legend>Whento?</legend>
-    
-            <input id="whento-past" type="radio" name="whento" value="past" checked onclick="toggle(`past-year`,this.id)"/>
-            <label for="whento-past" class="radio">Past (Travelling Tess)</label>
-    
-            <input id="whento-future" type="radio" name="whento" value="future" onclick="toggle(`future-year`,this.id)"/>
-            <label for="whento-future" class="radio">Future (Journeying James) </label>
-            <div id="past-year" style="display: none">
-                <label id="past-year" for="year">Year</label> 
-                <!-- make this only appear once you've selected past  -->
-                <input id="year" name="year" type="number" max="2023"/>
+    <main>
+        <div class="past stack-lg maxheight">
+            <h2 class="centered pageheading">Past</h2>
+                
+            <div>
+                <span class="row">
+                    <img href="" alt="Image of Tess traveling through time">
+                    <p class="textright">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque consequatur dolores iste. Autem illo temporibus eius deleniti architecto. Nobis magni ullam odio praesentium impedit, accusamus fugit voluptas repudiandae eos consequatur.
+                    Ipsum laudantium rem laborum assumenda ut sequi explicabo aliquam, voluptas omnis autem voluptatibus, pariatur excepturi modi odit iste, totam nisi sint consectetur quis ab perferendis amet suscipit eum! Nemo, commodi.
+                    Eaque officia eum repellat neque magni quaerat at enim rem quis, cumque possimus illum, labore delectus officiis atque. Corrupti error quo consectetur id ipsam. Accusantium nesciunt consequuntur sed blanditiis cum.
+                    Commodi, maiores. Et necessitatibus omnis ipsa quaerat obcaecati nesciunt molestiae ea autem excepturi voluptatibus eius ab officia delectus beatae distinctio perferendis ex quo debitis inventore, impedit itaque praesentium fuga. Omnis.</p>
+                </span>
             </div>
-            <div id="future-year" style="display: none">
-                <label id="future-year" for="year">Year</label> 
-                <!-- make this only appear once you've selected future  -->
-                <input id="year" name="year" type="number" min="2023"/>
+            <div>
+                <span class="centered">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, saepe laudantium? Assumenda dolore quae iure consequuntur excepturi error odit nihil unde aliquid alias? Doloremque in amet sed sapiente unde ipsam.
+                    Repudiandae debitis, tenetur id deleniti sequi rerum blanditiis explicabo quibusdam voluptates praesentium libero nihil odio hic? Magnam reiciendis, velit est dolores, ipsum, enim nobis repellat fugit eveniet provident quam aspernatur.</p>
+                </span>
             </div>
-        </fieldset>
-  
-        <label for="message">Message</label>
-        <textarea name="message"></textarea>
-  
-        <input id="marketingConsent" name="marketingConsent" type="checkbox" />
-        <label for="marketingConsent" class="checkbox">Give me updates on what year it is for you</label>
-  
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+
+            </div>
+            <section class="centered"> 
+                <!-- if james edited centered this could be problem -->
+                <form
+                id="form"
+                action="https://learn-forms.netlify.com/submit/part3"
+                method="GET">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" />
+          
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" />
+          
+                <label for="tel">Telephone</label>
+                <input id="tel" name="tel" type="tel" />
+          
+                <fieldset>
+                  <legend>Preferred contact method</legend>
+          
+                  <input id="contact-email" type="radio" name="contact" value="email" checked/>
+                  <label for="contact-email" class="radio">Email</label>
+          
+                  <input id="contact-tel" type="radio" name="contact" value="telephone" />
+                  <label for="contact-tel" class="radio">Telephone</label>
+          
+                  <input id="contact-futureself" type="radio" name="contact" value="futureself" />
+                  <label for="contact-futureself" class="radio">From your future self</label>
+                </fieldset>
+        
+                <fieldset>
+                    <legend>Whento?</legend>
+            
+                    <input id="whento-past" type="radio" name="whento" value="past" checked onclick="toggle(`past-year`,this.id)"/>
+                    <label for="whento-past" class="radio">Past (Travelling Tess)</label>
+            
+                    <input id="whento-future" type="radio" name="whento" value="future" onclick="toggle(`future-year`,this.id)"/>
+                    <label for="whento-future" class="radio">Future (Journeying James) </label>
+                    <div id="past-year" style="display: none">
+                        <label id="past-year" for="year">Year</label> 
+                        <!-- make this only appear once you've selected past  -->
+                        <input id="year" name="year" type="number" max="2023"/>
+                    </div>
+                    <div id="future-year" style="display: none">
+                        <label id="future-year" for="year">Year</label> 
+                        <!-- make this only appear once you've selected future  -->
+                        <input id="year" name="year" type="number" min="2023"/>
+                    </div>
+                </fieldset>
+          
+                <label for="message">Message</label>
+                <textarea name="message"></textarea>
+          
+                <input id="marketingConsent" name="marketingConsent" type="checkbox" />
+                <label for="marketingConsent" class="checkbox">Give me updates on what year it is for you</label>
+          
+                <button type="submit">Submit</button>
+              </form>
+            </section>
+        </body>
+        
+        <script>
+            function toggle(elementId,btnid) {
+                document.getElementById("future-year").style.display = "none"
+                document.getElementById("past-year").style.display = "none"
+              const element = document.getElementById(elementId);
+              const btn = document.getElementById(btnid);
+              if (element.style.display == "none") {
+                element.style.display = "block";
+              } 
+            }
+          </script>
+    </main>
 </body>
-
-<script>
-    function toggle(elementId,btnid) {
-        document.getElementById("future-year").style.display = "none"
-        document.getElementById("past-year").style.display = "none"
-      const element = document.getElementById(elementId);
-      const btn = document.getElementById(btnid);
-      if (element.style.display == "none") {
-        element.style.display = "block";
-      } 
-    }
-  </script>
 </html>
