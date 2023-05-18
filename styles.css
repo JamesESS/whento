@@ -37,7 +37,7 @@
     background-color: var(--pastcolour);
 }
 .right {
-    background-color: var(--futurecolour);
+  background-color: var(--futurecolour);
 }
 .middle {
     background: linear-gradient(to right,var(--pastcolour),var(--futurecolour));
@@ -53,5 +53,4 @@
     25% {transform: rotate(20deg)}
     50% {transform: rotate(0deg); font-size: 5rem;}
     75% {transform: rotate(-20deg)}
-    100% {transform: rotate(0deg)}
-}
+    100% {transform: rotate(0deg)}}
