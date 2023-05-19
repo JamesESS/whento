@@ -58,6 +58,8 @@
 form{
     background-color: pink;
     padding:50px 50px 40px 50px;
+    border-radius: 25px;
+    margin: 20px
 }
 
 label,
@@ -67,6 +69,7 @@ textarea {
 display: block;
 font: inherit;
 color: inherit;
+border-radius: 25px;
 }
 
 input,
@@ -170,4 +173,8 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
     gap:1rem;
     align-items: var(--align, center);
     justify-content: center;
+}
+
+.your-expert-t, .your-expert-j{
+    display:none;
 }
