@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
     <title>When To?</title>
 </head>
 <body>
     <header>       
-            <span class="row spacearound maxheight">
-                <div class="container maxwidth centertext left">
-                    <h2 class="hover">Past</h2>
-                </div>
-                <div class="container maxwidth centertext middle">
+            <span class="row spacearound maxheight landingpagecolour" id="landingpagecontainer">
+                <button class="container maxwidth centertext removebtnstyling">
+                    <h2 class="hover" id="landingpast">Past</h2>
+                </button>
+                <div class="titlecontainer maxwidth centertext">
+                    <div><img class="rewind" id="rewind" src="images/rewind50.svg" alt="rewind symbol"></div>
                     <h1 class="title">When To?</h1>
+                    <div><img class="ffwd" id="ffwd" src="images/rewind50.svg" alt="fast forward symbol"></div>
                 </div>
-                <div class="container maxwidth centertext right">
-                    <h2 class="hover">Future</h2>
-                </div>
+                <button class="container maxwidth centertext removebtnstyling">
+                    <h2 class="hover" id="landingfuture">Future</h2>
+                </button>
             </span>
     </header>
     <main class="stack-xl">

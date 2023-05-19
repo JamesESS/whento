@@ -6,9 +6,9 @@
 * {
     box-sizing: border-box;
     margin: 0px;
-    cursor: default;
+    cursor: default; /* should probably remove this to improve accessibility */
   }
-
+/* general/modular stylings */
 .row {
     display: flex;
 }
@@ -33,36 +33,6 @@
     text-align: center;
     line-height: 100vh;
 }
-.left {
-    background-color: var(--pastcolour);
-}
-.right {
-    background-color: var(--futurecolour);
-}
-.middle {
-    background: linear-gradient(to right,var(--pastcolour),var(--futurecolour));
-}
-.hover:hover{
-    animation-name: pastfuture;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes pastfuture {
-    45% {font-size: 5rem;}
-    55% {font-size: 5rem;}
-}
-
-.past {
-    background-color: var(--pastcolour);
-    padding-left: 15%;
-    padding-right: 15%;
-}
-.future {
-    background-color: var(--futurecolour);
-    padding-left: 15%;
-    padding-right: 15%;
-}
 .textright {
     padding-left: 50%;
 }
@@ -74,4 +44,73 @@
 }
 .stack-xl > *  {
     padding-top: 4rem;
+}
+/* Landing page specific */
+.titlecontainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.landingpagecolour {
+    background: linear-gradient(to right,var(--pastcolour) 43%,var(--futurecolour) 57%);
+    background-size: 200%;
+    background-position: 50% 0%;
+}
+.removebtnstyling {
+    background-color: transparent;
+    border: 0;
+}
+.hover:hover{
+    animation-name: pastfuture;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+@keyframes pastfuture {
+    45% {font-size: 5rem;}
+    100% {font-size: 5rem;}
+}
+.rewind {   /* styling for rewind image in heading */
+    position: relative;
+    left: 213%;
+    top: -1%;
+}
+.ffwd {     /* styling for ffwd image in heading */
+    position: relative;
+    left: -213%;
+    top: 7%;
+    transform: rotate(180deg);
+}
+@keyframes rewindpastanim {     /* makes rewind image move to the left when hovering over 'past' (hover handled in js not css) */
+    0% {left: 213%;}
+    100% {left: 0%}
+}
+@keyframes ffwdfutureanim {     /* makes ffwd image move to the right when hovering over 'future' (hover handled in js not css) */
+    0% {left: -213%;}
+    100% {left: 0%}
+}
+@keyframes gradientscrollleft {     /* moves background gradient left when hovering over 'past' (hover handled in js not css) */
+    0% {background-position: 50% 0%;}
+	100% {background-position: 100% 0%;}
+}
+@keyframes gradientscrollright {    /* moves background gradient right when hovering over 'future' (hover handled in js not css) */
+    0% {background-position: 50% 0%;}
+	100% {background-position: 0% 0%;}
+}
+.left { /* not being used by anything delete? unless Tess is using*/
+    background-color: var(--pastcolour);
+}
+.right { /* not being used by anything delete? unless Tess is using*/
+    background-color: var(--futurecolour);
+}
+/* main page content styling */
+.past {
+    background-color: var(--pastcolour);
+    padding-left: 15%; /* should split padding in this and .future into seperate section */
+    padding-right: 15%;
+}
+.future {
+    background-color: var(--futurecolour);
+    padding-left: 15%;
+    padding-right: 15%;
 }
