@@ -11,7 +11,7 @@
 <body>
     <header>       
             <span class="row spacearound maxheight landingpagecolour" id="landingpagecontainer">
-                <button class="container maxwidth centertext removebtnstyling">
+                <button class="container maxwidth centertext removebtnstyling removebuttonhover">
                     <h2 class="hover" id="landingpast">Past</h2>
                 </button>
                 <div class="titlecontainer maxwidth centertext">
@@ -19,11 +19,12 @@
                     <h1 class="title">When To?</h1>
                     <div><img class="ffwd" id="ffwd" src="images/rewind50.svg" alt="fast forward symbol"></div>
                 </div>
-                <button class="container maxwidth centertext removebtnstyling">
+                <button class="container maxwidth centertext removebtnstyling removebuttonhover">
                     <h2 class="hover" id="landingfuture">Future</h2>
                 </button>
             </span>
     </header>
+
     <main class="stack-xl">
         <div class="past stack-lg maxheight">
             <h2 class="centered pageheading">Past</h2>
@@ -59,76 +60,66 @@
                 </span>
             </div>
         </div>
-            <section class="centered"> 
-                <!-- if james edited centered this could be problem -->
-                <form
-                id="form"
-                action="https://learn-forms.netlify.com/submit/part3"
-                method="GET">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" />
-          
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" />
-          
-                <label for="tel">Telephone</label>
-                <input id="tel" name="tel" type="tel" />
-          
-                <fieldset>
-                  <legend>Preferred contact method</legend>
-          
-                  <input id="contact-email" type="radio" name="contact" value="email" checked/>
-                  <label for="contact-email" class="radio">Email</label>
-          
-                  <input id="contact-tel" type="radio" name="contact" value="telephone" />
-                  <label for="contact-tel" class="radio">Telephone</label>
-          
-                  <input id="contact-futureself" type="radio" name="contact" value="futureself" />
-                  <label for="contact-futureself" class="radio">From your future self</label>
-                </fieldset>
-        
-                <fieldset>
-                    <legend>Whento?</legend>
+    <section class="centered"> 
+        <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
+            <div class="formHeader">
+                <button id="pastFormButton" type="button" style="width:5rem" onclick="document.getElementById(`your-expert-j`).style.display=`none`;document.getElementById(`your-expert-t`).style.display=`block`;document.getElementById(`future-year`).style.display=`none`;document.getElementById(`past-year`).style.display=`block`;document.getElementById(`expert-t`).checked=true;document.getElementById(`expert-j`).checked=false;">Past</button>        
+                <button id="futureFormButton" type="button" style="width:5rem" onclick="document.getElementById(`your-expert-j`).style.display=`block`;document.getElementById(`your-expert-t`).style.display=`none`;document.getElementById(`future-year`).style.display=`block`;document.getElementById(`past-year`).style.display=`none`;document.getElementById(`expert-t`).checked=false;document.getElementById(`expert-j`).checked=true;">Future</button>        
+            </div>
+            <fieldset class="pastForm" id="your-expert-t" style="display:none">
+                <legend>Your time travelling expert is...</legend>
+                <input id="expert-t" type="radio" name="expert" value="tess" checked/>
+                <label for="expert-t" class="radio">Travelling Tess</label>
             
-                    <input id="whento-past" type="radio" name="whento" value="past" checked onclick="toggle(`past-year`,this.id)"/>
-                    <label for="whento-past" class="radio">Past (Travelling Tess)</label>
-            
-                    <input id="whento-future" type="radio" name="whento" value="future" onclick="toggle(`future-year`,this.id)"/>
-                    <label for="whento-future" class="radio">Future (Journeying James) </label>
-                    <div id="past-year" style="display: none">
-                        <label id="past-year" for="year">Year</label> 
-                        <!-- make this only appear once you've selected past  -->
-                        <input id="year" name="year" type="number" max="2023"/>
-                    </div>
-                    <div id="future-year" style="display: none">
-                        <label id="future-year" for="year">Year</label> 
-                        <!-- make this only appear once you've selected future  -->
-                        <input id="year" name="year" type="number" min="2023"/>
-                    </div>
-                </fieldset>
-          
-                <label for="message">Message</label>
-                <textarea name="message"></textarea>
-          
-                <input id="marketingConsent" name="marketingConsent" type="checkbox" />
-                <label for="marketingConsent" class="checkbox">Give me updates on what year it is for you</label>
-          
-                <button type="submit">Submit</button>
-              </form>
-            </section>
-        </body>
-        
-        <script>
-            function toggle(elementId,btnid) {
-                document.getElementById("future-year").style.display = "none"
-                document.getElementById("past-year").style.display = "none"
-              const element = document.getElementById(elementId);
-              const btn = document.getElementById(btnid);
-              if (element.style.display == "none") {
-                element.style.display = "block";
-              } 
-            }
-          </script>
+            </fieldset>
+            <fieldset class="futureForm" id="your-expert-j" style="display:none">
+                <legend>Your time travelling expert is...</legend>
+                <input id="expert-j" type="radio" name="expert" value="james" checked/>
+                <label for="expert-j" class="radio">Journeying James</label>
+            </fieldset>
+
+            <div class="pastForm" id="past-year" style="display: none">
+                <label id="yearpast" for="year">Year you'd like to go to (Optional)</label> 
+                <input id="yearpast" name="year" type="number" max="2023"/>
+            </div>
+            <div class="futureForm" id="future-year" style="display: none">
+                <label id="yearfuture" for="year">Year you'd like to go to (Optional)</label> 
+                <input id="yearfuture" name="year" type="number" min="2023"/>
+            </div>
+
+
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" />
+    
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" />
+    
+            <label for="tel">Telephone</label>
+            <input id="tel" name="tel" type="tel" />
+    
+            <fieldset>
+            <legend>Preferred contact method</legend>
+    
+            <input id="contact-email" type="radio" name="contact" value="email" checked/>
+            <label for="contact-email" class="radio">Email</label>
+    
+            <input id="contact-tel" type="radio" name="contact" value="telephone" />
+            <label for="contact-tel" class="radio">Telephone</label>
+    
+            <input id="contact-futureself" type="radio" name="contact" value="futureself" />
+            <label for="contact-futureself" class="radio">From your future self</label>
+            </fieldset>
+    
+            <label for="message">Message</label>
+            <textarea name="message"></textarea>
+    
+            <input id="marketingConsent" name="marketingConsent" type="checkbox" />
+            <label for="marketingConsent" class="checkbox">Give me updates on what year it is for you</label>
+    
+            <button id="submit" type="submit">Submit</button>
+      </form>
+    </section>   
+
     </main>
 </body>
 </html>
