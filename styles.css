@@ -1,6 +1,9 @@
 :root {
-    --pastcolour: rgb(101,219,219);
-    --futurecolour: rgb(144,105,203);
+    --pastcolour: #81d2c7;
+    --futurecolour: #7389ae;
+    --col3: #e0e0e2;
+    --col4: #7389ae;
+    --col5: #416788;
 }
 
 * {
@@ -44,6 +47,14 @@
 }
 .stack-xl > *  {
     padding-top: 4rem;
+}
+.hidden {
+    display: none;
+}
+/* navbar specific */
+.stickyheader {
+    position: sticky;
+    top: 0;
 }
 /* Landing page specific */
 .titlecontainer {
