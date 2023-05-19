@@ -25,9 +25,30 @@
     <section class="centered"> 
         <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
             <div class="formHeader">
-                <button id="futureFormButton" type="button" style="width:5rem">Future</button>        
-                <button id="pastFormButton" type="button" style="width:5rem">Past</button>        
+                <button id="pastFormButton" type="button" style="width:5rem" onclick="document.getElementById(`your-expert-j`).style.display=`none`;document.getElementById(`your-expert-t`).style.display=`block`;document.getElementById(`future-year`).style.display=`none`;document.getElementById(`past-year`).style.display=`block`;document.getElementById(`expert-t`).checked=true;document.getElementById(`expert-j`).checked=false;">Past</button>        
+                <button id="futureFormButton" type="button" style="width:5rem" onclick="document.getElementById(`your-expert-j`).style.display=`block`;document.getElementById(`your-expert-t`).style.display=`none`;document.getElementById(`future-year`).style.display=`block`;document.getElementById(`past-year`).style.display=`none`;document.getElementById(`expert-t`).checked=false;document.getElementById(`expert-j`).checked=true;">Future</button>        
             </div>
+            <fieldset class="pastForm" id="your-expert-t" style="display:none">
+                <legend>Your time travelling expert is...</legend>
+                <input id="expert-t" type="radio" name="expert" value="tess" checked/>
+                <label for="expert-t" class="radio">Travelling Tess</label>
+            
+            </fieldset>
+            <fieldset class="futureForm" id="your-expert-j" style="display:none">
+                <legend>Your time travelling expert is...</legend>
+                <input id="expert-j" type="radio" name="expert" value="james" checked/>
+                <label for="expert-j" class="radio">Journeying James</label>
+            </fieldset>
+
+            <div class="pastForm" id="past-year" style="display: none">
+                <label id="yearpast" for="year">Year you'd like to go to (Optional)</label> 
+                <input id="yearpast" name="year" type="number" max="2023"/>
+            </div>
+            <div class="futureForm" id="future-year" style="display: none">
+                <label id="yearfuture" for="year">Year you'd like to go to (Optional)</label> 
+                <input id="yearfuture" name="year" type="number" min="2023"/>
+            </div>
+
 
             <label for="name">Name</label>
             <input id="name" name="name" type="text" />
@@ -49,16 +70,6 @@
     
             <input id="contact-futureself" type="radio" name="contact" value="futureself" />
             <label for="contact-futureself" class="radio">From your future self</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>Pick your time expert</legend>
-        
-                <input id="who-t" type="radio" name="who" value="t" checked/>
-                <label for="who-t" class="radio">Travelling Tess</label>
-        
-                <input id="who-j" type="radio" name="who" value="j"/>
-                <label for="who-j" class="radio">Journeying James</label>
             </fieldset>
     
             <label for="message">Message</label>
