@@ -37,7 +37,7 @@
     background-color: var(--pastcolour);
 }
 .right {
-  background-color: var(--futurecolour);
+    background-color: var(--futurecolour);
 }
 .middle {
     background: linear-gradient(to right,var(--pastcolour),var(--futurecolour));
@@ -177,4 +177,29 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
 
 .your-expert-t, .your-expert-j{
     display:none;
+    45% {font-size: 5rem;}
+    55% {font-size: 5rem;}
+}
+
+.past {
+    background-color: var(--pastcolour);
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.future {
+    background-color: var(--futurecolour);
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.textright {
+    padding-left: 50%;
+}
+.textleft {
+    padding-right: 50%;
+}
+.stack-lg > * + * {
+    padding-top: 2rem;
+}
+.stack-xl > *  {
+    padding-top: 4rem;
 }
