@@ -12,6 +12,8 @@ const landingFuture = document.getElementById("landingfuture");
 const landingContainer = document.getElementById("landingpagecontainer")
 const rewindSymbol = document.getElementById("rewind");
 const ffwdSymbol = document.getElementById("ffwd");
+const pastButton = document.getElementById("pastbutton");
+const futureButton = document.getElementById("futurebutton");
 /* Event listeners for landin page */
 landingPast.addEventListener("mouseover",e => {     //makes rewind image and background gradient move left on hover
     rewindSymbol.style.animation = "rewindpastanim 1s forwards";
@@ -30,3 +32,5 @@ landingFuture.addEventListener("mouseleave",e => {  //resets rewind image and ba
     ffwdSymbol.style.animation = "none";
     landingContainer.style.animation = "none"
 })
+pastButton.addEventListener("click", e => document.getElementById("pastpage").scrollIntoView(true))  //scrolls page to element with id "pastpage"
+futureButton.addEventListener("click", e => document.getElementById("futurepage").scrollIntoView(true))
