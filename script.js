@@ -1,6 +1,6 @@
 /* variables for navbar */
 const navContainer = document.getElementById("navbarcontainer")
-let viewportHeight = window.innerHeight - window.innerHeight/10; //gets viewport height minus 10% of viewrport height
+let viewportHeight = window.innerHeight - window.innerHeight/2.5; //gets viewport height minus 10% of viewrport height
 /* event listener for navbar */
 window.addEventListener("scroll", e => {  //think this is very resource intensive. Should maybe change to set interval or some other method instead?
     if (window.scrollY>viewportHeight) navContainer.classList.remove("hidden"); //shows navbar once you scroll to bottom of landing page
