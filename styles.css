@@ -18,6 +18,9 @@
 .spacearound {
     justify-content: space-around;
 }
+.spacebetween{
+    justify-content: space-between;   
+}
 .maxwidth {
     width: 100vw;
 }
@@ -55,6 +58,20 @@
 .stickyheader {
     position: sticky;
     top: 0;
+    font-size: 1.5rem;
+}
+
+.navbarlist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.navbarliitem {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
 }
 /* Landing page specific */
 .titlecontainer {
