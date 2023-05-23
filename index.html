@@ -9,7 +9,8 @@
     <title>When To?</title>
 </head>
 <body>
-    <navbar class="stickyheader hidden row spacebetween landingpagecolour" id="navbarcontainer">
+    <main class="stack-xl scroll-container">
+    <navbar class="stickyheader row spacebetween landingpagecolour" id="navbarcontainer">
         <span>
             <p>When To?</p>
         </span>    
@@ -19,7 +20,8 @@
             <li class="navbarliitem"><a href="#form">Contact</a></li>
         </ul>
     </navbar>
-    <header>       
+
+    <section>       
             <span class="row spacearound maxheight landingpagecolour" id="landingpagecontainer">
                 
                 <button class="container maxwidth centertext removebtnstyling removebuttonhover" id="pastbutton">
@@ -35,10 +37,9 @@
                     <h2 class="hover" id="landingfuture">Future</h2>
                 </button>
             </span>
-    </header>
+        </section>
 
-    <main class="stack-xl">
-        <div class="past stack-lg maxheight" id="pastpage">
+        <section class="past stack-lg maxheight" id="pastpage">
             <h2 class="centered pageheading">Past</h2>
             <div>
                 <span class="row">
@@ -55,8 +56,8 @@
                     Repudiandae debitis, tenetur id deleniti sequi rerum blanditiis explicabo quibusdam voluptates praesentium libero nihil odio hic? Magnam reiciendis, velit est dolores, ipsum, enim nobis repellat fugit eveniet provident quam aspernatur.</p>
                 </span>
             </div>
-        </div>
-        <div class="future stack-lg maxheight" id="futurepage">
+        </section>
+        <section class="future stack-lg maxheight" id="futurepage">
             <h2 class="centered pageheading">Future</h2>
             <div>
                 <span class="row">
@@ -71,8 +72,8 @@
                     Repudiandae debitis, tenetur id deleniti sequi rerum blanditiis explicabo quibusdam voluptates praesentium libero nihil odio hic? Magnam reiciendis, velit est dolores, ipsum, enim nobis repellat fugit eveniet provident quam aspernatur.</p>
                 </span>
             </div>
-        </div>
-    <section class="centered"> 
+        </section>
+    <section class="centered maxheight"> 
         <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
             <div class="formHeader">
                 <button id="pastFormButton" type="button" style="width:5rem" onclick="pastClick()">Past</button>        
@@ -131,7 +132,6 @@
             <button id="submit" type="submit">Submit</button>
       </form>
     </section>   
-
     </main>
 </body>
 </html>

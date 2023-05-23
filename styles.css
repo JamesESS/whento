@@ -59,6 +59,8 @@
     position: sticky;
     top: 0;
     font-size: 1.5rem;
+    border-bottom: solid 4px var(--col4);
+    background-color: var(--col3);
 }
 
 .navbarlist {
@@ -143,6 +145,21 @@
     padding-right: 15%;
 }
 /* ---------- */
+
+.scroll-container, section{
+    max-width: 100vh;
+    height:100vh;
+    scroll-padding: 60px;
+}
+.scroll-container{
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+section{
+    scroll-snap-align: start
+}
+
 form{
     background-color:var(--pastcolour);
     padding:50px 50px 40px 50px;
@@ -269,3 +286,4 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
 .your-expert-t, .your-expert-j{
     display:none;
 }
+
