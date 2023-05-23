@@ -84,6 +84,10 @@
     background-size: 200%;
     background-position: 50% 0%;
 }
+#landingpagecontainer :nth-child(1) {order: 2}   /* reorder past, when to and future so they flow correctly with screen reader */
+#landingpagecontainer :nth-child(2) {order: 1}
+#landingpagecontainer :nth-child(3) {order: 3}
+
 .removebtnstyling {
     background-color: transparent;
     border: 0;
@@ -104,12 +108,12 @@
 }
 .rewind {   /* styling for rewind image in heading */
     position: relative;
-    /* left: 213%; */
+    left: 213%;
     top: -1%;
 }
 .ffwd {     /* styling for ffwd image in heading */
     position: relative;
-    /* left: -213%; */
+    left: -213%;
     top: 7%;
     transform: rotate(180deg);
 }
