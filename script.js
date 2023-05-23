@@ -15,6 +15,15 @@ const ffwdSymbol = document.getElementById("ffwd");
 const pastButton = document.getElementById("pastbutton");
 const futureButton = document.getElementById("futurebutton");
 /* Event listeners for landin page */
+positionTimeSymbols();
+function positionTimeSymbols() {  // positions rewind and ffwd symbols based on size of whento
+    const whenTo = document.getElementById("whentotitle");
+    console.log(ffwdSymbol.getBoundingClientRect())
+    ffwdSymbol.style.left = (whenTo.getBoundingClientRect().width)*-1 + "px"  //moves ffwdsymbol left by width of whento
+    rewindSymbol.style.left = (whenTo.getBoundingClientRect().width) + "px" //moves rewindsymbol right by width of whento
+    ffwdSymbol.style.top = (whenTo.getBoundingClientRect().height + (whenTo.getBoundingClientRect().height)/2) + "px"   //moves ffwd top by height of whento
+    rewindSymbol.style.top = (whenTo.getBoundingClientRect().height + (whenTo.getBoundingClientRect().height)/2)*-1 + "px" //moves rewind bottom by height of whento
+}
 landingPast.addEventListener("mouseover",e => {     //makes rewind image and background gradient move left on hover
     rewindSymbol.style.animation = "rewindpastanim 1s forwards";
     landingContainer.style.animation = "gradientscrollleft 1s forwards"

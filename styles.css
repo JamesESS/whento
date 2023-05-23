@@ -34,6 +34,7 @@
 }
 .fitcontent {
     width: fit-content;
+    height: fit-content;
 }
 .centertext {
     text-align: center;
@@ -76,30 +77,21 @@
         text-decoration: none;
 }
 /* Landing page specific */
-.titlecontainer {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
 .landingpagecolour {
     background: linear-gradient(to right,var(--pastcolour) 43%,var(--futurecolour) 57%);
     background-size: 200%;
     background-position: 50% 0%;
 }
-.removebtnstyling {
-    background-color: transparent;
-    border: 0;
+/* for h1 (when to?) ffwd and rewind */
+.titlecontainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.hover:hover{
-    animation-name: pastfuture;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    cursor: pointer;
-}
-@keyframes pastfuture {
-    45% {font-size: 5rem;}
-    100% {font-size: 5rem;}
-}
+.order2 {order: 2}   /* reorder past, when to and future so they flow correctly with screen reader */
+.order1 {order: 1}
+.order3 {order: 3}
 .rewind {   /* styling for rewind image in heading */
     position: relative;
     left: 213%;
@@ -111,6 +103,26 @@
     top: 7%;
     transform: rotate(180deg);
 }
+
+.removebtnstyling {
+    background-color: transparent;
+    border: 0;
+    border-color: transparent;
+}
+.removebuttonhover:hover {
+    background-color: transparent;
+}
+.hover:hover{
+    animation-name: pastfuture;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+@keyframes pastfuture {
+    45% {font-size: 5rem;}
+    100% {font-size: 5rem;}
+}
+
 @keyframes rewindpastanim {     /* makes rewind image move to the left when hovering over 'past' (hover handled in js not css) */
     0% {left: 213%;}
     100% {left: 0%}
@@ -259,9 +271,7 @@ button {
 button:hover {
     background-color: hsl(220, 20%, 90%);
 }
-.removebuttonhover:hover {
-    background-color: transparent;
-}
+
 
 input:focus,
 textarea:focus,
