@@ -1,10 +1,19 @@
 /* variables for navbar */
-const navContainer = document.getElementById("navbarcontainer")
+const navContainer = document.getElementById("navbarcontainer");
+const mainPage = document.getElementById("mainpage");  //all scrolling is done on main not window so need to add event listenr to main
 let viewportHeight = window.innerHeight - window.innerHeight/2.5; //gets viewport height minus 10% of viewrport height
+const pastPage = document.getElementById("pastpage");
+const futurePage = document.getElementById("futurepage");
+const formPage = document.getElementById("formpage");
 /* event listener for navbar */
-window.addEventListener("scroll", e => {  //think this is very resource intensive. Should maybe change to set interval or some other method instead?
-    if (window.scrollY>viewportHeight) navContainer.classList.remove("hidden"); //shows navbar once you scroll to bottom of landing page
+console.log(mainPage.scrollTop,pastPage.getBoundingClientRect().top,futurePage.getBoundingClientRect().top);
+mainPage.addEventListener("scroll", e => {  //think this is very resource intensive. Should maybe change to set interval or some other method instead?
+    console.log(mainPage.scrollTop,pastPage.getBoundingClientRect().top,futurePage.getBoundingClientRect().top);
+    if (mainPage.scrollTop>viewportHeight) navContainer.classList.remove("hidden"); //shows navbar once you scroll to bottom of landing page
     else navContainer.classList.add("hidden");
+    if (formPage.getBoundingClientRect().top < viewportHeight);
+    else if (futurePage.getBoundingClientRect().top < viewportHeight) navContainer.style.backgroundColor = "var(--futurecolour)";
+    else if (pastPage.getBoundingClientRect().top < viewportHeight) navContainer.style.backgroundColor = "var(--pastcolour)";
 })
 /* variables for landing page */
 const landingPast = document.getElementById("landingpast");
