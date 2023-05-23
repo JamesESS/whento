@@ -78,28 +78,30 @@
     <section class="centered maxheight landingpagecolour"> 
         <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
             <div class="formHeader">
-                <button id="pastFormButton" type="button" style="width:5rem" onclick="pastClick()"><h1>past</h1></button>        
-                <button id="futureFormButton" type="button" style="width:5rem" onclick="futureClick()"><h1>future</h1></button>        
+                <button id="pastFormButton" type="button" style="width:5rem" onclick="pastClick()" aria-label="Selects the form for wanting to go to the past"><h1>past</h1></button>        
+                <button id="futureFormButton" type="button" style="width:5rem" onclick="futureClick()" aria-label="Selectd the form for wanting to go to the future"><h1>future</h1></button>        
             </div>
-            <fieldset class="pastForm" id="your-expert-t" style="display:none">
+            <fieldset class="pastForm" id="your-expert-t" style="display:none" aria-labelledby="legend-travelling-tess">
                 <legend>Your time travelling expert is...</legend>
-                <input id="expert-t" type="radio" name="expert" value="tess" checked/>
-                <label for="expert-t" class="radio">Travelling Tess</label>
+                <input id="expert-t" type="radio" name="expert" value="tess" checked aria-labelledby="legend-travelling-tess"/>
+                <label for="expert-t" id="expert-t-label" class="radio">Travelling Tess</label>
             
             </fieldset>
-            <fieldset class="futureForm" id="your-expert-j" style="display:none">
+            <fieldset class="futureForm" id="your-expert-j" style="display:none" aria-labelledby="legend-journeying-james">
                 <legend>Your time travelling expert is...</legend>
-                <input id="expert-j" type="radio" name="expert" value="james" checked/>
-                <label for="expert-j" class="radio">Journeying James</label>
+                <input id="expert-j" type="radio" name="expert" value="james" checked aria-labelledby="legend-journeying-james"/>
+                <label for="expert-j" id="expert-j-label" class="radio">Journeying James</label>
             </fieldset>
 
             <div class="pastForm" id="past-year" style="display: none">
                 <label for="yearpast">Year you'd like to go to (Optional)</label> 
-                <input id="yearpast" name="yearpast" type="number" max="2023"/>
+                <input id="yearpast" name="yearpast" type="number" max="2023" aria-describedby="yearpast-description" />
+                <span id="yearpast-description">Enter a year in the past that you'd like to go to.</span>
             </div>
             <div class="futureForm" id="future-year" style="display: none">
                 <label for="yearfuture">Year you'd like to go to (Optional)</label> 
-                <input id="yearfuture" name="yearfuture" type="number" min="2023"/>
+                <input id="yearfuture" name="yearfuture" type="number" min="2023" aria-describedby="yearfuture-description" />
+                <span id="yearfuture-description">Enter a year in the future that you'd like to go to.</span>
             </div>
 
 
