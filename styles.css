@@ -34,6 +34,7 @@
 }
 .fitcontent {
     width: fit-content;
+    height: fit-content;
 }
 .centertext {
     text-align: center;
@@ -84,6 +85,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .order2 {order: 2}   /* reorder past, when to and future so they flow correctly with screen reader */
 .order1 {order: 1}

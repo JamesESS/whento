@@ -15,6 +15,15 @@ const ffwdSymbol = document.getElementById("ffwd");
 const pastButton = document.getElementById("pastbutton");
 const futureButton = document.getElementById("futurebutton");
 /* Event listeners for landin page */
+positionTimeSymbols();
+function positionTimeSymbols() {  // positions rewind and ffwd symbols based on size of whento
+    const whenTo = document.getElementById("whentotitle");
+    console.log(ffwdSymbol.getBoundingClientRect())
+    ffwdSymbol.style.left = (whenTo.getBoundingClientRect().width)*-1 + "px"  //moves ffwdsymbol left by width of whento
+    rewindSymbol.style.left = (whenTo.getBoundingClientRect().width) + "px" //moves rewindsymbol right by width of whento
+    ffwdSymbol.style.top = (whenTo.getBoundingClientRect().height + (whenTo.getBoundingClientRect().height)/2) + "px"   //moves ffwd top by height of whento
+    rewindSymbol.style.top = (whenTo.getBoundingClientRect().height + (whenTo.getBoundingClientRect().height)/2)*-1 + "px" //moves rewind bottom by height of whento
+}
 landingPast.addEventListener("mouseover",e => {     //makes rewind image and background gradient move left on hover
     rewindSymbol.style.animation = "rewindpastanim 1s forwards";
     landingContainer.style.animation = "gradientscrollleft 1s forwards"
@@ -34,15 +43,3 @@ landingFuture.addEventListener("mouseleave",e => {  //resets rewind image and ba
 })
 pastButton.addEventListener("click", e => document.getElementById("pastpage").scrollIntoView(true))  //scrolls page to element with id "pastpage"
 futureButton.addEventListener("click", e => document.getElementById("futurepage").scrollIntoView(true))
-
-
-
-/* test dynamically placing the arrows on landing page */
-const whenTo = document.getElementById("whentotitle");
-console.log(ffwdSymbol.getBoundingClientRect())
-console.log(whenTo.getBoundingClientRect())
-console.log(whenTo.getBoundingClientRect().right - whenTo.getBoundingClientRect().left)
-ffwdSymbol.style.right = (whenTo.getBoundingClientRect().width) + "px"  //moves ffwdsymbol left by width of whento
-rewindSymbol.style.left = (whenTo.getBoundingClientRect().width) + "px" //moves rewindsymbol right by width of whento
-// ffwdSymbol.top = (ffwdSymbol.getBoundingClientRect().top - ffwdSymbol.getBoundingClientRect().bottom)*-1 + "px"  //whento has massiv line height so top/bottom aren't useful maybe change how text gets centered?
-// ffwdSymbol.style.top = whenTo.getBoundingClientRect().bottom + "px";
