@@ -43,3 +43,21 @@ landingFuture.addEventListener("mouseleave",e => {  //resets rewind image and ba
 })
 pastButton.addEventListener("click", e => document.getElementById("pastpage").scrollIntoView(true))  //scrolls page to element with id "pastpage"
 futureButton.addEventListener("click", e => document.getElementById("futurepage").scrollIntoView(true))
+
+function pastClick(){
+    document.getElementById(`your-expert-j`).style.display=`none`;
+    document.getElementById(`your-expert-t`).style.display=`block`;
+    document.getElementById(`future-year`).style.display=`none`;
+    document.getElementById(`past-year`).style.display=`block`;
+    document.getElementById(`expert-t`).checked=true;
+    document.getElementById(`expert-j`).checked=false;      
+}
+
+function futureClick(){
+    document.getElementById(`your-expert-j`).style.display=`block`;
+    document.getElementById(`your-expert-t`).style.display=`none`;
+    document.getElementById(`future-year`).style.display=`block`;
+    document.getElementById(`past-year`).style.display=`none`;
+    document.getElementById(`expert-t`).checked=false;
+    document.getElementById(`expert-j`).checked=true;    
+}
