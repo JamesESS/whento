@@ -63,13 +63,13 @@ body {
     display: none;
 }
 /* navbar specific */
+
 .stickyheader {
-    position: sticky;
+    position: fixed;
     top: 0;
     font-size: 1.5rem;
     border-bottom: solid 4px var(--col4);
     background-color: var(--col3);
-    z-index: 2;
     
 }
 .navbarlist {

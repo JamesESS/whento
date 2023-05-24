@@ -7,10 +7,12 @@ const futurePage = document.getElementById("futurepage");
 const formPage = document.getElementById("contactpage");
 const navbarItems = document.getElementsByClassName("navbarliitem");
 /* ----event listeners for navbar---- */
+navContainer.style.width = (pastPage.getBoundingClientRect().width + "px");
 [...navbarItems].forEach((item,i)=> item.addEventListener("click", e => mainPage.scroll(0,window.innerHeight*(i+1))));  //add event listener to each anchor in navbar. when clicked sets main page scroll to that pages y coord. Need to do this way instead of scrollTo as we are scrolling main to make snap scroll work
 /* think event listener scroll is very resource intensive. should maybe change to set interval or some other method instead? */
 mainPage.addEventListener("scroll", e => {  //Hide navbar when on landing page otherwise shows and changes colour depending on page position
     // console.log(mainPage.scrollTop,pastPage.getBoundingClientRect().y,futurePage.getBoundingClientRect().y,viewportHeight);
+    console.log(pastPage.getBoundingClientRect(),window.innerWidth);
     if (mainPage.scrollTop>=viewportHeight) navContainer.classList.remove("hidden"); //shows navbar once you scroll to bottom of landing page
     else navContainer.classList.add("hidden");
     if (formPage.getBoundingClientRect().top < viewportHeight); //checks if formpage is in view
