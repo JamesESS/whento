@@ -143,11 +143,9 @@ body {
 }
 
 @keyframes rewindpastanim {     /* makes rewind image move to the left when hovering over 'past' (hover handled in js not css) */
-    0% {left: 213%;}
     100% {left: 0%}
 }
 @keyframes ffwdfutureanim {     /* makes ffwd image move to the right when hovering over 'future' (hover handled in js not css) */
-    0% {left: -213%;}
     100% {left: 0%}
 }
 @keyframes gradientscrollleft {     /* moves background gradient left when hovering over 'past' (hover handled in js not css) */
