@@ -232,11 +232,11 @@ section{
 form{
     scroll-snap-align: end;
     background-color:var(--pastcolour);
-    padding:50px 50px 40px 50px;
+    padding:30px;
     border-radius: 25px;
     margin: auto;
     border: 3px solid white;
-    max-height:90vh;
+    /* max-height:90vh; */
 }
 
 label,
@@ -261,11 +261,12 @@ textarea {
 resize: vertical;
 }
 
+
 input[type="radio"],
 input[type="checkbox"] {
-position: absolute !important;
-clip: rect(1px, 1px, 1px, 1px) !important;
-overflow: hidden !important;
+position: fixed ;
+clip: rect(1px, 1px, 1px, 1px);
+overflow: hidden;
 }
 
 [type="checkbox"] + label,
@@ -293,14 +294,12 @@ border-radius: 50%;
 }
 
 [type="radio"]:checked + label::before {
-/* background-color: hsl(220, 30%, 40%); */
 background-image: radial-gradient(
     hsl(220, 30%, 40%),
     hsl(220, 30%, 40%) 40%,
     transparent 40%,
     transparent
 );
-/* box-shadow: inset 0 0 0 0.25em var(--bg); */
 }
 
 [type="checkbox"]:checked + label::before {
@@ -341,9 +340,9 @@ button:focus,
     box-shadow: 0 0 0 3px var(--col4);
 }
 
-/* input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
+input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
     display:none;
-} */
+}
 
 .formHeader{
     display: flex;
@@ -358,12 +357,11 @@ button:focus,
 }
 
 @media screen and (max-width: 768px) {
-    /* Adjust the font size here */
     body{
-      font-size: calc(100% - 50%);
+      /* font-size: calc(100% - 50%); */
     }
     form{
-        padding:25px 25px 20px 25px;
+        /* padding:auto; */
     }
     form > * + * {
         margin-top: 0.5rem;
