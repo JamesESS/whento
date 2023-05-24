@@ -25,7 +25,6 @@
                 <a href="javascript:;" class="navbaricon" id="burgermenuicon" aria-label="opens burger menu" aria-expanded="false">menu <i class="fa fa-bars" aria-hidden="true"></i></a>
             </navbar>
         </header>
-
         <section class="row spacearound maxheight landingpagecolour" id="landingpagecontainer">
             <div class="titlecontainer maxwidth order2">
                 <div><img class="rewind" id="rewind" src="images/rewind50.svg" alt="rewind symbol pointing towards past heading"></div>
@@ -35,7 +34,7 @@
                 <div><img class="ffwd" id="ffwd" src="images/rewind50.svg" alt="fast forward symbol pointing towards future heading"></div>
             </div>
             <button class="container maxwidth centertext removebtnstyling removebuttonhover order1" id="pastbutton" type="button" aria-label="Jumps to past section of webpage">
-                <h2 class="hover" id="landingpast"><pre> past </pre>  </h2>
+                <h2 class="hover" id="landingpast" aria-hidden="true"><pre> past </pre>  </h2>
             </button>
             <button class="container maxwidth centertext removebtnstyling removebuttonhover order3" id="futurebutton" type="button" aria-label="Jumps to future section of webpage">
                 <h2 class="hover" id="landingfuture" aria-hidden="true"> <pre> future </pre>   </h2>
@@ -162,7 +161,7 @@
             <input id="marketingConsent" name="marketingConsent" type="checkbox" />
             <label for="marketingConsent" class="checkbox">Give me updates on what year it is for you</label>
     
-            <button id="submit" type="submit">Submit</button>
+            <button id="submit" type="submit"><h1>submit</h1></button>
       </form>
     </section>   
     </main>
