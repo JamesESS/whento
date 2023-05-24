@@ -18,6 +18,9 @@ h1,h2{
     color: var(--col3);
     background-color: #41678839;
     border-radius: 9999px;
+    width: fit-content;
+    margin:auto
+    
 
 }
 
@@ -83,18 +86,47 @@ body {
     background-color: var(--col3);
     
 }
+.navtitle {
+    padding-left: 10px;
+}
 .navbarlist {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     gap: 0 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 .navbarliitem {
         display: block;
         text-align: center;
-        padding: 14px 16px;
         text-decoration: none;
+}
+.navbaricon {
+    display: none;
+}
+@media screen and (max-width: 700px) {
+    #mobilecheck {display: none;}
+    .navbarlist {
+        display: none;
+    }
+    .navbaricon {
+        display: block;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    .burgermenuexpanded {
+        position: fixed;
+        display: block;
+        top: 4.5%;
+        right: 0px;
+        background-color: var(--col3);
+        padding-left: 5px;
+    }
+    .navbarliitem {
+        text-align: left;
+    }
 }
 /* Landing page specific */
 .landingpagecolour {
@@ -163,15 +195,15 @@ body {
     background-color: var(--futurecolour);
 }
 /* main page content styling */
+.page{
+    padding-left:15%;
+    padding-right:15%
+}
 .past {
     background-color: var(--pastcolour);
-    padding-left: 15%; /* should split padding in this and .future into seperate section */
-    padding-right: 15%;
 }
 .future {
     background-color: var(--futurecolour);
-    padding-left: 15%;
-    padding-right: 15%;
 }
 /* ---------- */
 
@@ -190,6 +222,7 @@ section{
 }
 
 form{
+    scroll-snap-align: end;
     background-color:var(--pastcolour);
     padding:50px 50px 40px 50px;
     border-radius: 25px;
@@ -246,8 +279,6 @@ justify-content: center;
 transition: background-color 0.2s;
 }
 
-
-
 [type="radio"] + label::before {
 border-radius: 50%;
 }
@@ -301,9 +332,9 @@ button:focus,
     box-shadow: 0 0 0 3px var(--col4);
 }
 
-input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
+/* input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
     display:none;
-}
+} */
 
 .formHeader{
     display: flex;

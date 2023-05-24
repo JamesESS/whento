@@ -1,3 +1,10 @@
+const mediaQueryCheck = document.getElementById("mobilecheck")  //element that is only styled in media query
+let mobile = false;
+onMobileDevice();
+function onMobileDevice() {  //checks if css currently using screen width media query
+    if (getComputedStyle(mediaQueryCheck).display == "none") mobile = true;
+    else mobile = false
+}
 /* ----variables for navbar---- */
 const navContainer = document.getElementById("navbarcontainer");
 const mainPage = document.getElementById("mainpage");  //all scrolling is done on main not window so need to add event listenr to main
@@ -5,15 +12,18 @@ const pastPage = document.getElementById("pastpage");
 const futurePage = document.getElementById("futurepage");
 const formPage = document.getElementById("contactpage");
 const navbarItems = document.getElementsByClassName("navbarliitem");
+const burgerMenu = document.getElementById("burgermenuicon");
 let viewportHeight = window.innerHeight - window.innerHeight/2.5; //gets viewport height minus 10% of viewrport height
 /* ----event listeners for navbar---- */
 addEventListener("orientationchange",e => { //resizes navbar when orientation changed & corrects value of viewport height
     resizeNavBar();
     updateViewportHeight();
+    onMobileDevice()
 }); 
 addEventListener("resize",e => {    //resizes navbar when window is resized & corrects value of viewport height
     resizeNavBar();
     updateViewportHeight();
+    onMobileDevice()
 });  
 resizeNavBar();
 function resizeNavBar() {  //makes navbar same width as main to avoid overlapping scroll bar
@@ -25,8 +35,9 @@ function updateViewportHeight() {
 [...navbarItems].forEach((item,i)=> item.addEventListener("click", e => mainPage.scroll(0,window.innerHeight*(i+1))));  //add event listener to each anchor in navbar. when clicked sets main page scroll to that pages y coord. Need to do this way instead of scrollTo as we are scrolling main to make snap scroll work
 /* think event listener scroll is very resource intensive. should maybe change to set interval or some other method instead? */
 mainPage.addEventListener("scroll", e => {  //Hide navbar when on landing page otherwise shows and changes colour depending on page position
-    if (mainPage.scrollTop>=viewportHeight) navContainer.classList.remove("hidden"); //shows navbar once you scroll to bottom of landing page
-    else navContainer.classList.add("hidden"); //hides navbar when on landing page
+    if (mainPage.scrollTop>=viewportHeight || mobile) navContainer.classList.remove("hidden"); //shows navbar once you scroll to bottom of landing page or  always on mobile
+    else navContainer.classList.add("hidden"); //hides navbar when on landing page and not on mobile
+    /* handles background colour of navbar should restructure */
     if (formPage.getBoundingClientRect().top < viewportHeight) navContainer.classList.add("landingpagecolour"); //checks if formpage is in view
     else if (futurePage.getBoundingClientRect().top < viewportHeight) { //checks if future page is in view
         navContainer.classList.remove("landingpagecolour");
@@ -36,6 +47,11 @@ mainPage.addEventListener("scroll", e => {  //Hide navbar when on landing page o
         navContainer.classList.remove("landingpagecolour");
         navContainer.style.backgroundColor = "var(--pastcolour)";
     }
+    else navContainer.classList.add("landingpagecolour");
+})
+burgerMenu.addEventListener("click", e => {
+    navContainer.children[1].classList.toggle("burgermenuexpanded");  //expands burgermenu
+    burgerMenu.ariaExpanded = !burgerMenu.ariaExpanded; //toggles aria expanded on burger menu
 })
 /* ----variables for landing page---- */
 const landingPast = document.getElementById("landingpast");

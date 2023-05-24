@@ -14,66 +14,97 @@
     <main class="stack-xl scroll-container landingpagecolour" id="mainpage">
         <header class="fixed">
             <navbar class="hidden stickyheader row spacebetween" id="navbarcontainer">
-                <span>
-                    <p>whento?</p>
+                <span class="navtitle">
+                    <p> whento? </p>
                 </span>
                 <ul class="navbarlist row">
                     <li class="navbarliitem"><a href="javascript:;">past</a></li>
                     <li class="navbarliitem"><a href="javascript:;">future</a></li>
                     <li class="navbarliitem"><a href="javascript:;">contact</a></li>
                 </ul>
+                <a href="javascript:;" class="navbaricon" id="burgermenuicon" aria-label="opens burger menu" aria-expanded="false">menu <i class="fa fa-bars" aria-hidden="true"></i></a>
             </navbar>
         </header>
+
         <section class="row spacearound maxheight landingpagecolour" id="landingpagecontainer">
             <div class="titlecontainer maxwidth order2">
-                <div><img class="rewind landingimage" id="rewind" src="images/rewind50.svg" alt="rewind symbol pointing towards past heading"></div>
-                <div class="fitcontent">
-                    <h1 class="title" id="whentotitle">when to?</h1>
-                </div>
+                <div><img class="rewind" id="rewind" src="images/rewind50.svg" alt="rewind symbol pointing towards past heading"></div>
+                <button class="container centertext removebtnstyling removebuttonhover" id="when2btn" type="button" aria-label="shows-description">
+                    <h2 class="title hover" id="whentotitle" aria-hidden="true"><pre> when to? </pre>  </h2>
+                </button>
                 <div><img class="ffwd" id="ffwd" src="images/rewind50.svg" alt="fast forward symbol pointing towards future heading"></div>
             </div>
             <button class="container maxwidth centertext removebtnstyling removebuttonhover order1" id="pastbutton" type="button" aria-label="Jumps to past section of webpage">
-                <h2 class="hover" id="landingpast" aria-hidden="true">past</h2>
+                <h2 class="hover" id="landingpast"><pre> past </pre>  </h2>
             </button>
             <button class="container maxwidth centertext removebtnstyling removebuttonhover order3" id="futurebutton" type="button" aria-label="Jumps to future section of webpage">
-                <h2 class="hover" id="landingfuture" aria-hidden="true">future</h2>
+                <h2 class="hover" id="landingfuture" aria-hidden="true"> <pre> future </pre>   </h2>
             </button>
+            <!-- want this description below to appear when hovering on when to -->
+            <!-- <div id="web-description" class="titlecontainer centertext" style="font-size: 1ch; z-index: 0;"><p>Welcome to the world of time travel, where mistakes can be corrected, adventures await, and the past and future are within your grasp. At our time travelling agency, we have mastered the art of traversing through time, offering you the unique opportunity to rewrite history, explore unseen worlds, and embark on extraordinary journeys. Let us introduce you to our exceptional time travelling experts: Travelling Tess and Journeying James.</p></div> -->
         </section>
-        <section class="past stack-lg maxheight" id="pastpage">
-            <h2 class="centered pageheading">past</h2>
+
+        <section class="past page stack-lg maxheight" id="pastpage">
+            <h2 class="centered pageheading"><pre> past </pre>  </h2>
             <div>
                 <span class="row">
                     <img href="" alt="Image of Tess traveling through time">
-                    <p class="textright">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque consequatur dolores iste. Autem illo temporibus eius deleniti architecto. Nobis magni ullam odio praesentium impedit, accusamus fugit voluptas repudiandae eos consequatur.
-                    Ipsum laudantium rem laborum assumenda ut sequi explicabo aliquam, voluptas omnis autem voluptatibus, pariatur excepturi modi odit iste, totam nisi sint consectetur quis ab perferendis amet suscipit eum! Nemo, commodi.
-                    Eaque officia eum repellat neque magni quaerat at enim rem quis, cumque possimus illum, labore delectus officiis atque. Corrupti error quo consectetur id ipsam. Accusantium nesciunt consequuntur sed blanditiis cum.
-                    Commodi, maiores. Et necessitatibus omnis ipsa quaerat obcaecati nesciunt molestiae ea autem excepturi voluptatibus eius ab officia delectus beatae distinctio perferendis ex quo debitis inventore, impedit itaque praesentium fuga. Omnis.</p>
+                    <p class="textright">Travelling Tess, a seasoned time explorer, possesses an unmatched passion for unraveling the mysteries of the past. With her extensive knowledge of historical events and civilizations, Tess can guide you through the annals of time, immersing you in the richness of bygone eras. From the grandeur of ancient civilizations to the intellectual awakening of the Renaissance, Tess will ensure you experience history like never before.
+                    </p>
                 </span>
             </div>
             <div>
                 <span class="centered">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, saepe laudantium? Assumenda dolore quae iure consequuntur excepturi error odit nihil unde aliquid alias? Doloremque in amet sed sapiente unde ipsam.
-                    Repudiandae debitis, tenetur id deleniti sequi rerum blanditiis explicabo quibusdam voluptates praesentium libero nihil odio hic? Magnam reiciendis, velit est dolores, ipsum, enim nobis repellat fugit eveniet provident quam aspernatur.</p>
+                    <p>Our agency's mission is to provide you with transformative experiences through the power of time travel. We believe that by revisiting the past, correcting mistakes, or exploring alternative futures, you can gain valuable insights, broaden your horizons, and shape a better present. Whether you seek personal growth, historical immersion, or an exhilarating adventure, we have the perfect time travel service tailored to your desires.</p>
+                    <p>With our time travel services, you can choose from a variety of captivating experiences. Our "Historical Adventures" category allows you to witness pivotal moments in history, walk alongside iconic figures, and gain a deeper understanding of the past.
+                    </p>
                 </span>
             </div>
         </section>
-        <section class="future stack-lg maxheight" id="futurepage">
-            <h2 class="centered pageheading">future</h2>
+
+        <section class="future page stack-lg maxheight" id="futurepage">
+            <h2 class="centered pageheading"><pre> future </pre>  </h2>
             <div>
                 <span class="row">
                     <p class="textleft">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque consequatur dolores iste. Autem illo    temporibus eius deleniti architecto. Nobis magni ullam odio praesentium impedit, accusamus fugit voluptas repudiandae eos consequatur. Ipsum laudantium rem laborum assumenda ut sequi explicabo aliquam, voluptas omnis autem voluptatibus, pariatur excepturi modi odit iste, totam nisi sint consectetur quis ab perferendis amet suscipit eum! Nemo, commodi.Eaque officia eum repellat neque magni quaerat at enim rem quis, cumque possimus illum, labore delectus officiis atque. Corrupti error quo consectetur id ipsam. Accusantium nesciunt consequuntur sed blanditiis cum.Commodi, maiores. Et necessitatibus omnis ipsa quaerat obcaecati nesciunt molestiae ea autem excepturi voluptatibus eius ab officia delectus beatae distinctio perferendis ex quo debitis inventore, impedit itaque praesentium fuga. Omnis.</p>
+                        Journeying James, is an intrepid adventurer with a vision that extends far into the future. His keen sense of curiosity and technological prowess allow him to navigate the uncharted territories of tomorrow. With James as your guide, you can witness technological marvels, explore futuristic landscapes, and gain a glimpse into the possibilities that lie ahead. Together, Tess and James form an unbeatable duo, ready to accompany you on your time travelling escapades.
+                    </p>
                     <img href="" alt="Image of James traveling through time">
                 </span>
             </div>
             <div>
                 <span class="centered">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, saepe laudantium? Assumenda dolore quae iure consequuntur excepturi error odit nihil unde aliquid alias? Doloremque in amet sed sapiente unde ipsam.
-                    Repudiandae debitis, tenetur id deleniti sequi rerum blanditiis explicabo quibusdam voluptates praesentium libero nihil odio hic? Magnam reiciendis, velit est dolores, ipsum, enim nobis repellat fugit eveniet provident quam aspernatur.</p>
+                    <p>
+                        Our agency's mission is to provide you with transformative experiences through the power of time travel. We believe that by exploring the future, you can expand your horizons, ignite your imagination, and shape a better present. Whether you seek technological marvels, societal evolution, or an exhilarating adventure, we have the perfect time travel service tailored to your desires.
+                    </p><p>
+                        With our time travel services, you can choose from a variety of captivating experiences. Our "Future Explorations" will take you to breathtaking realms where technological advancements and new societies await your discovery.
+                    </p>
                 </span>
             </div>
         </section>
-    <section class="centered maxheight landingpagecolour" id="contactpage"> 
+
+        <section class="page stack-lg maxheight" id="">
+            <h2 class="centered pageheading"><pre> more about time travel... </pre>  </h2>
+            <div>
+                <span class="row">
+                    <p class="textleft">
+                        For those seeking a second chance or an opportunity to rectify past mistakes, our "Personal Redo" service allows you to revisit pivotal moments in your life, providing a chance to rewrite history and set a new course. Additionally, our "Consciousness Expansion" service invites you to transcend time and explore the depths of your own consciousness, unlocking profound insights and self-discovery.
+                    </p>
+                    <img href="" alt="Imagsdfsdfsdfsdfdsesdfsdfe">
+                </span>
+            </div>
+            <div>
+                <span class="centered">
+                    <p>
+                        Travelling Tess, Journeying James, and our entire team of experienced time travel guides are committed to ensuring your safety and satisfaction throughout your time travel journey. We meticulously plan each trip, taking into account historical accuracy, ethical considerations, and the preservation of the space-time continuum.
+                    </p><p>
+                        Join us in unlocking the secrets of time travel and embark on a transformative adventure that will reshape your perception of the world. Let us guide you through the annals of history on one side and propel you into the possibilities of the future on the other. Contact us today and embark on an extraordinary journey with Travelling Tess and Journeying James. Together, we'll redefine what it means to travel through time.
+                    </p>
+                </span>
+            </div>
+        </section>
+
+    <section class="centered maxheight" id="contactpage"> 
         <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
             <div class="formHeader">
                 <button id="pastFormButton" type="button" style="width:5rem" onclick="pastClick()" aria-label="Selects the form for wanting to go to the past"><h1>past</h1></button>        
@@ -94,12 +125,12 @@
             <div class="pastForm" id="past-year" style="display: none">
                 <label for="yearpast">Year you'd like to go to (Optional)</label> 
                 <input id="yearpast" name="yearpast" type="number" max="2023" aria-describedby="yearpast-description" />
-                <span id="yearpast-description">Enter a year in the past that you'd like to go to.</span>
+                <span hidden id="yearpast-description">Enter a year in the past that you'd like to go to.</span>
             </div>
             <div class="futureForm" id="future-year" style="display: none">
                 <label for="yearfuture">Year you'd like to go to (Optional)</label> 
                 <input id="yearfuture" name="yearfuture" type="number" min="2023" aria-describedby="yearfuture-description" />
-                <span id="yearfuture-description">Enter a year in the future that you'd like to go to.</span>
+                <span hidden id="yearfuture-description">Enter a year in the future that you'd like to go to.</span>
             </div>
 
 
@@ -135,5 +166,6 @@
       </form>
     </section>   
     </main>
+    <span id="mobilecheck"></span>
 </body>
 </html>
