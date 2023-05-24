@@ -141,6 +141,30 @@ a {
     }
 } */
 /* Landing page specific */
+.landinggrid {
+    display: grid;
+    justify-content: space-around;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    grid-template-areas: 
+    ". . ."
+    "past whento future"
+    ". description ."
+    ;
+    
+}
+.grid1 {
+    grid-area: whento;
+}
+.grid2 {
+    grid-area: past;
+}
+.grid3 {
+    grid-area: future;
+}
+.grid4 {
+    grid-area: description;
+}
 .landingpagecolour {
     background: linear-gradient(to right,var(--pastcolour) 43%,var(--futurecolour) 57%);
     background-size: 200%;
@@ -201,6 +225,13 @@ a {
 @keyframes gradientscrollright {    /* moves background gradient right when hovering over 'future' (hover handled in js not css) */
     0% {background-position: 50% 0%;}
 	100% {background-position: 0% 0%;}
+}
+.whentotext {
+    color: rgba(255, 255, 255, 0);
+    transition: color 2s;
+}
+.whentotexttoggled {
+    color: rgba(255, 255, 255, 1);
 }
 .left { /* not being used by anything delete? unless Tess is using*/
     background-color: var(--pastcolour);
