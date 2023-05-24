@@ -36,6 +36,11 @@ body {
 .row {
     display: flex;
 }
+
+.rowwrap{
+    display:flex;
+    flex-wrap: wrap;
+}
 .spacearound {
     justify-content: space-around;
 }
@@ -67,6 +72,7 @@ body {
 .textleft {
     padding-right: 50%;
 }
+
 .stack-lg > * + * {
     padding-top: 2rem;
 }
@@ -118,12 +124,14 @@ body {
     position: relative;
     left: 213%;
     top: -1%;
+    filter: invert(0.87);  /* changes black image to off-white */
 }
 .ffwd {     /* styling for ffwd image in heading */
     position: relative;
     left: -213%;
     top: 7%;
     transform: rotate(180deg);
+    filter: invert(0.87);
 }
 
 .removebtnstyling {
@@ -197,8 +205,9 @@ form{
     background-color:var(--pastcolour);
     padding:50px 50px 40px 50px;
     border-radius: 25px;
-    margin: 20px;
+    margin: auto;
     border: 3px solid white;
+    max-height:90vh;
 }
 
 label,
@@ -319,3 +328,31 @@ button:focus,
     display:none;
 }
 
+@media screen and (max-width: 768px) {
+    /* Adjust the font size here */
+    body{
+      font-size: calc(100% - 50%);
+    }
+    form{
+        padding:25px 25px 20px 25px;
+    }
+    form > * + * {
+        margin-top: 0.5rem;
+    }
+    
+    fieldset > * + * {
+        margin-top: 0.1rem;
+    }
+    
+    input,
+    textarea {
+        margin-top: 0.3rem;
+        padding: 0.3rem 0.3rem;
+    }
+    
+    button {
+        padding: 0.25rem 0.2rem;
+        background-color: var(--col5);
+        transition: background-color 0.2s;
+    }
+  }
