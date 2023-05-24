@@ -28,9 +28,9 @@
         <section class="row spacearound maxheight landingpagecolour" id="landingpagecontainer">
             <div class="titlecontainer maxwidth order2">
                 <div><img class="rewind" id="rewind" src="images/rewind50.svg" alt="rewind symbol pointing towards past heading"></div>
-                <button class="container centertext removebtnstyling removebuttonhover" id="when2btn" type="button" aria-label="shows-description">
+                <div class="container centertext removebtnstyling removebuttonhover" id="when2btn" type="button" aria-label="shows-description">
                     <h2 class="title hover" id="whentotitle" aria-hidden="true"><pre> when to? </pre>  </h2>
-                </button>
+                </div>
                 <div><img class="ffwd" id="ffwd" src="images/rewind50.svg" alt="fast forward symbol pointing towards future heading"></div>
             </div>
             <button class="container maxwidth centertext removebtnstyling removebuttonhover order1" id="pastbutton" type="button" aria-label="Jumps to past section of webpage">
@@ -104,6 +104,7 @@
         </section>
 
     <section class="centered maxheight" id="contactpage"> 
+        <!-- prevent default -->
         <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
             <div class="formHeader">
                 <button id="pastFormButton" type="button" style="width:5rem" onclick="pastClick()" aria-label="Selects the form for wanting to go to the past"><h1>past</h1></button>        
