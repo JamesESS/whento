@@ -4,7 +4,7 @@
     --col3: #e0e0e2;
     --col4: #ffc1cfa0;  
     --col5: #416788d2;
-    --fade: #41678839
+    --fade: #4167886c;
 }
 
 * {
@@ -17,11 +17,14 @@
 h1,h2{
     max-height:max-content;
     color: var(--col3);
-    background-color: var(--fade);
     border-radius: 9999px;
     width: fit-content;
     margin:auto;
     padding:5px;
+}
+
+h2{
+    background-color: var(--fade);
     box-shadow: 0 0 0 1px var(--col4);
 }
 
