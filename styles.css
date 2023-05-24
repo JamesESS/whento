@@ -10,11 +10,22 @@
     box-sizing: border-box;
     margin: 0px;
     cursor: default; /* should probably remove this to improve accessibility */
-  }
+    font-family: "Gill Sans", sans-serif;
+}
+
+h1,h2{
+    max-height:max-content;
+    color: var(--col3);
+    background-color: #41678839;
+    border-radius: 9999px;
+
+}
 
 body {
     overflow: hidden;  /* removes 2nd scrollbar  */
 }
+
+
 /* general/modular stylings */
 .relative {
     position: relative;
@@ -45,7 +56,7 @@ body {
 }
 .centertext {
     text-align: center;
-    line-height: 100vh;
+    /* line-height: 100vh; */
 }
 .textright {
     padding-left: 50%;
@@ -184,7 +195,8 @@ form{
     background-color:var(--pastcolour);
     padding:50px 50px 40px 50px;
     border-radius: 25px;
-    margin: 20px
+    margin: 20px;
+    border: 3px solid white;
 }
 
 label,
@@ -236,6 +248,8 @@ justify-content: center;
 transition: background-color 0.2s;
 }
 
+
+
 [type="radio"] + label::before {
 border-radius: 50%;
 }
@@ -272,12 +286,12 @@ textarea {
 
 button {
     padding: 0.75rem 0.5rem;
-    background-color: hsl(220, 20%, 96%);
+    background-color: var(--col5);
     transition: background-color 0.2s;
 }
 
 button:hover {
-    background-color: hsl(220, 20%, 90%);
+    background-color: var(--col4);
 }
 
 
@@ -286,7 +300,7 @@ textarea:focus,
 button:focus,
 [type="checkbox"]:focus + label::before,
 [type="radio"]:focus + label::before {
-    box-shadow: 0 0 0 3px hsl(220, 70%, 70%);
+    box-shadow: 0 0 0 3px var(--col4);
 }
 
 input[type="radio"] .tab:after,input[type="checkbox"].tab:after{

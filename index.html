@@ -14,12 +14,12 @@
         <header class="fixed">
             <navbar class="hidden stickyheader row spacebetween" id="navbarcontainer">
                 <span>
-                    <p>When To?</p>
+                    <p>whento?</p>
                 </span>
                 <ul class="navbarlist row">
-                    <li class="navbarliitem"><a href="javascript:;">Past</a></li>
-                    <li class="navbarliitem"><a href="javascript:;">Future</a></li>
-                    <li class="navbarliitem"><a href="javascript:;">Contact</a></li>
+                    <li class="navbarliitem"><a href="javascript:;">past</a></li>
+                    <li class="navbarliitem"><a href="javascript:;">future</a></li>
+                    <li class="navbarliitem"><a href="javascript:;">contact</a></li>
                 </ul>
             </navbar>
         </header>
@@ -27,19 +27,19 @@
             <div class="titlecontainer maxwidth order2">
                 <div><img class="rewind" id="rewind" src="images/rewind50.svg" alt="rewind symbol pointing towards past heading"></div>
                 <div class="fitcontent">
-                    <h1 class="title" id="whentotitle">When To?</h1>
+                    <h1 class="title" id="whentotitle">when to?</h1>
                 </div>
                 <div><img class="ffwd" id="ffwd" src="images/rewind50.svg" alt="fast forward symbol pointing towards future heading"></div>
             </div>
             <button class="container maxwidth centertext removebtnstyling removebuttonhover order1" id="pastbutton" type="button" aria-label="Jumps to past section of webpage">
-                <h2 class="hover" id="landingpast" aria-hidden="true">Past</h2>
+                <h2 class="hover" id="landingpast" aria-hidden="true">past</h2>
             </button>
             <button class="container maxwidth centertext removebtnstyling removebuttonhover order3" id="futurebutton" type="button" aria-label="Jumps to future section of webpage">
-                <h2 class="hover" id="landingfuture" aria-hidden="true">Future</h2>
+                <h2 class="hover" id="landingfuture" aria-hidden="true">future</h2>
             </button>
         </section>
         <section class="past stack-lg maxheight" id="pastpage">
-            <h2 class="centered pageheading">Past</h2>
+            <h2 class="centered pageheading">past</h2>
             <div>
                 <span class="row">
                     <img href="" alt="Image of Tess traveling through time">
@@ -57,7 +57,7 @@
             </div>
         </section>
         <section class="future stack-lg maxheight" id="futurepage">
-            <h2 class="centered pageheading">Future</h2>
+            <h2 class="centered pageheading">future</h2>
             <div>
                 <span class="row">
                     <p class="textleft">
@@ -72,31 +72,33 @@
                 </span>
             </div>
         </section>
-    <section class="centered maxheight" id="contactpage"> 
+    <section class="centered maxheight landingpagecolour" id="contactpage"> 
         <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
             <div class="formHeader">
-                <button id="pastFormButton" type="button" style="width:5rem" onclick="pastClick()">Past</button>        
-                <button id="futureFormButton" type="button" style="width:5rem" onclick="futureClick()">Future</button>        
+                <button id="pastFormButton" type="button" style="width:5rem" onclick="pastClick()" aria-label="Selects the form for wanting to go to the past"><h1>past</h1></button>        
+                <button id="futureFormButton" type="button" style="width:5rem" onclick="futureClick()" aria-label="Selectd the form for wanting to go to the future"><h1>future</h1></button>        
             </div>
-            <fieldset class="pastForm" id="your-expert-t" style="display:none">
+            <fieldset class="pastForm" id="your-expert-t" style="display:none" aria-labelledby="legend-travelling-tess">
                 <legend>Your time travelling expert is...</legend>
-                <input id="expert-t" type="radio" name="expert" value="tess" checked/>
-                <label for="expert-t" class="radio">Travelling Tess</label>
+                <input id="expert-t" type="radio" name="expert" value="tess" checked aria-labelledby="legend-travelling-tess"/>
+                <label for="expert-t" id="expert-t-label" class="radio">Travelling Tess</label>
             
             </fieldset>
-            <fieldset class="futureForm" id="your-expert-j" style="display:none">
+            <fieldset class="futureForm" id="your-expert-j" style="display:none" aria-labelledby="legend-journeying-james">
                 <legend>Your time travelling expert is...</legend>
-                <input id="expert-j" type="radio" name="expert" value="james" checked/>
-                <label for="expert-j" class="radio">Journeying James</label>
+                <input id="expert-j" type="radio" name="expert" value="james" checked aria-labelledby="legend-journeying-james"/>
+                <label for="expert-j" id="expert-j-label" class="radio">Journeying James</label>
             </fieldset>
 
             <div class="pastForm" id="past-year" style="display: none">
-                <label id="yearpast" for="year">Year you'd like to go to (Optional)</label> 
-                <input id="yearpast" name="year" type="number" max="2023"/>
+                <label for="yearpast">Year you'd like to go to (Optional)</label> 
+                <input id="yearpast" name="yearpast" type="number" max="2023" aria-describedby="yearpast-description" />
+                <span id="yearpast-description">Enter a year in the past that you'd like to go to.</span>
             </div>
             <div class="futureForm" id="future-year" style="display: none">
-                <label id="yearfuture" for="year">Year you'd like to go to (Optional)</label> 
-                <input id="yearfuture" name="year" type="number" min="2023"/>
+                <label for="yearfuture">Year you'd like to go to (Optional)</label> 
+                <input id="yearfuture" name="yearfuture" type="number" min="2023" aria-describedby="yearfuture-description" />
+                <span id="yearfuture-description">Enter a year in the future that you'd like to go to.</span>
             </div>
 
 
@@ -123,7 +125,7 @@
             </fieldset>
     
             <label for="message">Message</label>
-            <textarea name="message"></textarea>
+            <textarea id="message" name="message"></textarea>
     
             <input id="marketingConsent" name="marketingConsent" type="checkbox" />
             <label for="marketingConsent" class="checkbox">Give me updates on what year it is for you</label>
