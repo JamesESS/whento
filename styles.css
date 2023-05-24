@@ -166,15 +166,15 @@ body {
     background-color: var(--futurecolour);
 }
 /* main page content styling */
+.page{
+    padding-left:15%;
+    padding-right:15%
+}
 .past {
     background-color: var(--pastcolour);
-    padding-left: 15%; /* should split padding in this and .future into seperate section */
-    padding-right: 15%;
 }
 .future {
     background-color: var(--futurecolour);
-    padding-left: 15%;
-    padding-right: 15%;
 }
 /* ---------- */
 
