@@ -250,8 +250,6 @@ justify-content: center;
 transition: background-color 0.2s;
 }
 
-
-
 [type="radio"] + label::before {
 border-radius: 50%;
 }
@@ -305,9 +303,9 @@ button:focus,
     box-shadow: 0 0 0 3px var(--col4);
 }
 
-input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
+/* input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
     display:none;
-}
+} */
 
 .formHeader{
     display: flex;
