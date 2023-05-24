@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
     <title>When To?</title>
 </head>
 <body>
     
     <main class="stack-xl scroll-container landingpagecolour" id="mainpage">
-
         <header class="fixed">
             <navbar class="hidden stickyheader row spacebetween" id="navbarcontainer">
-                <span>
+                <span class="navtitle">
                     <p> whento? </p>
                 </span>
                 <ul class="navbarlist row">
@@ -22,9 +22,9 @@
                     <li class="navbarliitem"><a href="javascript:;">future</a></li>
                     <li class="navbarliitem"><a href="javascript:;">contact</a></li>
                 </ul>
+                <a href="javascript:;" class="navbaricon" id="burgermenuicon" aria-label="opens burger menu" aria-expanded="false">menu <i class="fa fa-bars" aria-hidden="true"></i></a>
             </navbar>
         </header>
-
         <section class="row spacearound maxheight landingpagecolour" id="landingpagecontainer">
             <div class="titlecontainer maxwidth order2">
                 <div><img class="rewind" id="rewind" src="images/rewind50.svg" alt="rewind symbol pointing towards past heading"></div>
@@ -165,5 +165,6 @@
       </form>
     </section>   
     </main>
+    <span id="mobilecheck"></span>
 </body>
 </html>
