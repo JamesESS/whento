@@ -18,6 +18,9 @@ h1,h2{
     color: var(--col3);
     background-color: #41678839;
     border-radius: 9999px;
+    width: fit-content;
+    margin:auto
+    
 
 }
 
@@ -190,6 +193,7 @@ section{
 }
 
 form{
+    scroll-snap-align: end;
     background-color:var(--pastcolour);
     padding:50px 50px 40px 50px;
     border-radius: 25px;

@@ -10,11 +10,11 @@
 </head>
 <body>
     
-    <main class="stack-xl scroll-container" id="mainpage">
+    <main class="stack-xl scroll-container landingpagecolour" id="mainpage">
         <header class="fixed">
             <navbar class="hidden stickyheader row spacebetween" id="navbarcontainer">
                 <span>
-                    <p>whento?</p>
+                    <p> whento? </p>
                 </span>
                 <ul class="navbarlist row">
                     <li class="navbarliitem"><a href="javascript:;">past</a></li>
@@ -27,19 +27,19 @@
             <div class="titlecontainer maxwidth order2">
                 <div><img class="rewind" id="rewind" src="images/rewind50.svg" alt="rewind symbol pointing towards past heading"></div>
                 <div class="fitcontent">
-                    <h1 class="title" id="whentotitle">when to?</h1>
+                    <h1 class="title" id="whentotitle"> <pre> when to? </pre> </h1>
                 </div>
                 <div><img class="ffwd" id="ffwd" src="images/rewind50.svg" alt="fast forward symbol pointing towards future heading"></div>
             </div>
             <button class="container maxwidth centertext removebtnstyling removebuttonhover order1" id="pastbutton" type="button" aria-label="Jumps to past section of webpage">
-                <h2 class="hover" id="landingpast" aria-hidden="true">past</h2>
+                <h2 class="hover" id="landingpast" aria-hidden="true"><pre> past </pre>  </h2>
             </button>
             <button class="container maxwidth centertext removebtnstyling removebuttonhover order3" id="futurebutton" type="button" aria-label="Jumps to future section of webpage">
-                <h2 class="hover" id="landingfuture" aria-hidden="true">future</h2>
+                <h2 class="hover" id="landingfuture" aria-hidden="true"> <pre> future </pre>   </h2>
             </button>
         </section>
         <section class="past stack-lg maxheight" id="pastpage">
-            <h2 class="centered pageheading">past</h2>
+            <h2 class="centered pageheading"><pre> past </pre>  </h2>
             <div>
                 <span class="row">
                     <img href="" alt="Image of Tess traveling through time">
@@ -57,7 +57,7 @@
             </div>
         </section>
         <section class="future stack-lg maxheight" id="futurepage">
-            <h2 class="centered pageheading">future</h2>
+            <h2 class="centered pageheading"><pre> future </pre>  </h2>
             <div>
                 <span class="row">
                     <p class="textleft">
@@ -93,12 +93,12 @@
             <div class="pastForm" id="past-year" style="display: none">
                 <label for="yearpast">Year you'd like to go to (Optional)</label> 
                 <input id="yearpast" name="yearpast" type="number" max="2023" aria-describedby="yearpast-description" />
-                <span id="yearpast-description">Enter a year in the past that you'd like to go to.</span>
+                <span hidden id="yearpast-description">Enter a year in the past that you'd like to go to.</span>
             </div>
             <div class="futureForm" id="future-year" style="display: none">
                 <label for="yearfuture">Year you'd like to go to (Optional)</label> 
                 <input id="yearfuture" name="yearfuture" type="number" min="2023" aria-describedby="yearfuture-description" />
-                <span id="yearfuture-description">Enter a year in the future that you'd like to go to.</span>
+                <span hidden id="yearfuture-description">Enter a year in the future that you'd like to go to.</span>
             </div>
 
 
