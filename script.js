@@ -1,12 +1,23 @@
-/* variables for navbar */
-const navContainer = document.getElementById("navbarcontainer")
+/* ----variables for navbar---- */
+const navContainer = document.getElementById("navbarcontainer");
+const mainPage = document.getElementById("mainpage");  //all scrolling is done on main not window so need to add event listenr to main
 let viewportHeight = window.innerHeight - window.innerHeight/2.5; //gets viewport height minus 10% of viewrport height
-/* event listener for navbar */
-window.addEventListener("scroll", e => {  //think this is very resource intensive. Should maybe change to set interval or some other method instead?
-    if (window.scrollY>viewportHeight) navContainer.classList.remove("hidden"); //shows navbar once you scroll to bottom of landing page
-    else navContainer.classList.add("hidden");
+const pastPage = document.getElementById("pastpage");
+const futurePage = document.getElementById("futurepage");
+const formPage = document.getElementById("contactpage");
+const navbarItems = document.getElementsByClassName("navbarliitem");
+/* ----event listeners for navbar---- */
+navContainer.style.width = (pastPage.getBoundingClientRect().width + "px");
+[...navbarItems].forEach((item,i)=> item.addEventListener("click", e => mainPage.scroll(0,window.innerHeight*(i+1))));  //add event listener to each anchor in navbar. when clicked sets main page scroll to that pages y coord. Need to do this way instead of scrollTo as we are scrolling main to make snap scroll work
+/* think event listener scroll is very resource intensive. should maybe change to set interval or some other method instead? */
+mainPage.addEventListener("scroll", e => {  //Hide navbar when on landing page otherwise shows and changes colour depending on page position
+    if (mainPage.scrollTop>=viewportHeight) navContainer.classList.remove("hidden"); //shows navbar once you scroll to bottom of landing page
+    else navContainer.classList.add("hidden"); //hides navbar when on landing page
+    if (formPage.getBoundingClientRect().top < viewportHeight); //checks if formpage is in view
+    else if (futurePage.getBoundingClientRect().top < viewportHeight) navContainer.style.backgroundColor = "var(--futurecolour)"; //checks if future page is in view
+    else if (pastPage.getBoundingClientRect().top < viewportHeight) navContainer.style.backgroundColor = "var(--pastcolour)"; //checks if past page is in view
 })
-/* variables for landing page */
+/* ----variables for landing page---- */
 const landingPast = document.getElementById("landingpast");
 const landingFuture = document.getElementById("landingfuture");
 const landingContainer = document.getElementById("landingpagecontainer")
@@ -14,11 +25,11 @@ const rewindSymbol = document.getElementById("rewind");
 const ffwdSymbol = document.getElementById("ffwd");
 const pastButton = document.getElementById("pastbutton");
 const futureButton = document.getElementById("futurebutton");
-/* Event listeners for landin page */
+/* ----Event listeners for landing page---- */
 positionTimeSymbols();
 function positionTimeSymbols() {  // positions rewind and ffwd symbols based on size of whento
     const whenTo = document.getElementById("whentotitle");
-    console.log(ffwdSymbol.getBoundingClientRect())
+    // console.log(ffwdSymbol.getBoundingClientRect())
     ffwdSymbol.style.left = (whenTo.getBoundingClientRect().width)*-1 + "px"  //moves ffwdsymbol left by width of whento
     rewindSymbol.style.left = (whenTo.getBoundingClientRect().width) + "px" //moves rewindsymbol right by width of whento
     ffwdSymbol.style.top = (whenTo.getBoundingClientRect().height + (whenTo.getBoundingClientRect().height)/2) + "px"   //moves ffwd top by height of whento

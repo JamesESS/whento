@@ -9,38 +9,35 @@
     <title>When To?</title>
 </head>
 <body>
-    <main class="stack-xl scroll-container">
-    <navbar class="stickyheader row spacebetween landingpagecolour" id="navbarcontainer">
-        <span>
-            <p>whento?</p>
-        </span>    
-        <ul class="navbarlist row">
-            <li class="navbarliitem"><a href="#pastpage">past</a></li>
-            <li class="navbarliitem"><a href="#futurepage">future</a></li>
-            <li class="navbarliitem"><a href="#form">contact</a></li>
-        </ul>
-    </navbar>
-
-            <section class="row spacearound maxheight landingpagecolour" id="landingpagecontainer">
-                
-                
-                <div class="titlecontainer maxwidth order2">
-                    <div><img class="rewind" id="rewind" src="images/rewind50.svg" alt="rewind symbol pointing towards past heading"></div>
-                    <div class="fitcontent">
-                        <h1 class="title" id="whentotitle">when to?</h1>
-                    </div>
-                    <div><img class="ffwd" id="ffwd" src="images/rewind50.svg" alt="fast forward symbol pointing towards future heading"></div>
+    
+    <main class="stack-xl scroll-container" id="mainpage">
+        <header class="fixed">
+            <navbar class="hidden stickyheader row spacebetween" id="navbarcontainer">
+                <span>
+                    <p>whento?</p>
+                </span>
+                <ul class="navbarlist row">
+                    <li class="navbarliitem"><a href="javascript:;">past</a></li>
+                    <li class="navbarliitem"><a href="javascript:;">future</a></li>
+                    <li class="navbarliitem"><a href="javascript:;">contact</a></li>
+                </ul>
+            </navbar>
+        </header>
+        <section class="row spacearound maxheight landingpagecolour" id="landingpagecontainer">
+            <div class="titlecontainer maxwidth order2">
+                <div><img class="rewind" id="rewind" src="images/rewind50.svg" alt="rewind symbol pointing towards past heading"></div>
+                <div class="fitcontent">
+                    <h1 class="title" id="whentotitle">when to?</h1>
                 </div>
-
-                <button class="container maxwidth centertext removebtnstyling removebuttonhover order1" id="pastbutton" type="button" aria-label="Jumps to past section of webpage">
-                    <h2 class="hover" id="landingpast" aria-hidden="true">past</h2>
-                </button>
-
-                <button class="container maxwidth centertext removebtnstyling removebuttonhover order3" id="futurebutton" type="button" aria-label="Jumps to future section of webpage">
-                    <h2 class="hover" id="landingfuture" aria-hidden="true">future</h2>
-                </button>
-            </section>
-
+                <div><img class="ffwd" id="ffwd" src="images/rewind50.svg" alt="fast forward symbol pointing towards future heading"></div>
+            </div>
+            <button class="container maxwidth centertext removebtnstyling removebuttonhover order1" id="pastbutton" type="button" aria-label="Jumps to past section of webpage">
+                <h2 class="hover" id="landingpast" aria-hidden="true">past</h2>
+            </button>
+            <button class="container maxwidth centertext removebtnstyling removebuttonhover order3" id="futurebutton" type="button" aria-label="Jumps to future section of webpage">
+                <h2 class="hover" id="landingfuture" aria-hidden="true">future</h2>
+            </button>
+        </section>
         <section class="past stack-lg maxheight" id="pastpage">
             <h2 class="centered pageheading">past</h2>
             <div>
@@ -75,7 +72,7 @@
                 </span>
             </div>
         </section>
-    <section class="centered maxheight landingpagecolour"> 
+    <section class="centered maxheight landingpagecolour" id="contactpage"> 
         <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
             <div class="formHeader">
                 <button id="pastFormButton" type="button" style="width:5rem" onclick="pastClick()" aria-label="Selects the form for wanting to go to the past"><h1>past</h1></button>        

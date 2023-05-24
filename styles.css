@@ -2,7 +2,7 @@
     --pastcolour: #81d2c7;
     --futurecolour: #7389ae;
     --col3: #e0e0e2;
-    --col4: #7389ae;
+    --col4: #7389ae;  /* This is the same as future colour???? */
     --col5: #416788;
 }
 
@@ -21,8 +21,15 @@ h1,h2{
 
 }
 
+body {
+    overflow: hidden;  /* removes 2nd scrollbar  */
+}
+
 
 /* general/modular stylings */
+.relative {
+    position: relative;
+}
 .row {
     display: flex;
 }
@@ -67,14 +74,15 @@ h1,h2{
     display: none;
 }
 /* navbar specific */
+
 .stickyheader {
-    position: sticky;
+    position: fixed;
     top: 0;
     font-size: 1.5rem;
     border-bottom: solid 4px var(--col4);
     background-color: var(--col3);
+    
 }
-
 .navbarlist {
     list-style-type: none;
     margin: 0;
@@ -172,7 +180,7 @@ h1,h2{
 .scroll-container, section{
     max-width: 100vw;
     height:100vh;
-    scroll-padding: 60px;
+    /* scroll-padding: 60px; */
 }
 .scroll-container{
     overflow: auto;
