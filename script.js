@@ -75,10 +75,16 @@ function positionTimeSymbols() {  // positions rewind and ffwd symbols based on 
     rewindSymbol.style.top = (whenTo.getBoundingClientRect().height + (whenTo.getBoundingClientRect().height)/2)*-1 + "px" //moves rewind bottom by height of whento
 }
 whenTo.addEventListener("mouseover", e => { //shows web-description on hover
-    if (!webDescription.className.includes("whentotexttoggled")) webDescription.style.color = "rgba(255, 255, 255, 1)"; //exits event listener if button toggled otherwise continue with intedned func
+    if (!webDescription.className.includes("whentotexttoggled")) {
+        webDescription.style.color = "rgba(255, 255, 255, 1)"; //exits event listener if button toggled otherwise continue with intedned func
+        webDescription.style.backgroundColor = "var(--fade)";
+    }
 })
 whenTo.addEventListener("mouseleave", e => { //hides web-description when mouse leaves
-    if (!webDescription.className.includes("whentotexttoggled")) webDescription.style.color = "rgba(255, 255, 255, 0)";
+    if (!webDescription.className.includes("whentotexttoggled")) {
+        webDescription.style.color = "rgba(255, 255, 255, 0)";
+        webDescription.style.backgroundColor = "transparent";
+    }
 })
 webDescriptionToggle.addEventListener("click", e => { //toggles web-description being visible. overides event listeners above
     webDescription.classList.toggle("whentotexttoggled");

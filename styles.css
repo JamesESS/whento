@@ -218,10 +218,13 @@ a {
 
 .whentotext {
     color: rgba(255, 255, 255, 0);
-    transition: color 2s;
+    background-color: transparent;
+    height: fit-content;
+    transition: color 2s, background-color 2s;
 }
 .whentotexttoggled {
     color: rgba(255, 255, 255, 1);
+    background-color: var(--fade);
 }
 .left { /* not being used by anything delete? unless Tess is using*/
     background-color: var(--pastcolour);
