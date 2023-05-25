@@ -83,21 +83,29 @@ webDescriptionToggle.addEventListener("click", e => { //toggles web-description 
     webDescription.classList.toggle("whentotexttoggled");
 })
 landingPast.addEventListener("mouseover",e => {     //makes rewind image and background gradient move left on hover
-    rewindSymbol.style.animation = "rewindpastanim 1s forwards";
-    landingContainer.style.animation = "gradientscrollleft 1s forwards"
+    // rewindSymbol.style.animation = "rewindpastanim 1s forwards";
+    // landingContainer.style.animation = "gradientscrollleft 1s forwards"
+    landingContainer.style.backgroundPosition = "100% 0%";
+    rewindSymbol.style.left = "0";
 })
 landingPast.addEventListener("mouseleave",e => {    //resets rewind image and backkground gradient to original positions
-    rewindSymbol.style.animation = "none";
-    landingContainer.style.animation = "none"
+    // rewindSymbol.style.animation = "none";
+    // landingContainer.style.animation = "none"
+    landingContainer.style.backgroundPosition = "50% 0%";
+    rewindSymbol.style.left = (whenTo.getBoundingClientRect().width) + "px" //moves rewindsymbol right by width of whento
 })
 
 landingFuture.addEventListener("mouseenter",e => {  //makes rewind image and background gradient move left on hover
-    ffwdSymbol.style.animation = "ffwdfutureanim 1s forwards";
-    landingContainer.style.animation = "gradientscrollright 1s forwards"    
+    // ffwdSymbol.style.animation = "ffwdfutureanim 1s forwards";
+    // landingContainer.style.animation = "gradientscrollright 1s forwards" 
+    landingContainer.style.backgroundPosition = "0% 0%";
+    ffwdSymbol.style.left = 0;   
 })
 landingFuture.addEventListener("mouseleave",e => {  //resets rewind image and backkground gradient to original positions
-    ffwdSymbol.style.animation = "none";
-    landingContainer.style.animation = "none"
+    // ffwdSymbol.style.animation = "none";
+    // landingContainer.style.animation = "none"
+    landingContainer.style.backgroundPosition = "50% 0%";
+    ffwdSymbol.style.left = (whenTo.getBoundingClientRect().width)*-1 + "px"  //moves ffwdsymbol left by width of whento
 })
 pastButton.addEventListener("click", e => document.getElementById("pastpage").scrollIntoView(true))  //scrolls page to element with id "pastpage"
 futureButton.addEventListener("click", e => document.getElementById("futurepage").scrollIntoView(true))

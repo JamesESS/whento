@@ -173,6 +173,7 @@ a {
     background: linear-gradient(to right,var(--pastcolour) 43%,var(--futurecolour) 57%);
     background-size: 200%;
     background-position: 50% 0%;
+    transition: background-position 1.5s;
 }
 /* for h1 (when to?) ffwd and rewind */
 .titlecontainer {
@@ -189,6 +190,7 @@ a {
     left: 213%;
     top: -1%;
     filter: invert(0.87);  /* changes black image to off-white */
+    transition: left 1.5s;
 }
 .ffwd {     /* styling for ffwd image in heading */
     position: relative;
@@ -196,6 +198,7 @@ a {
     top: 7%;
     transform: rotate(180deg);
     filter: invert(0.87);
+    transition: left 1.5s;
 }
 .removebtnstyling {
     background-color: transparent;
@@ -205,31 +208,14 @@ a {
 .removebuttonhover:hover {
     background-color: transparent;
 }
-.hover:hover{
-    animation-name: pastfuture;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    cursor: pointer;
+.hover {
+    font-size: 2rem;
+    transition: font-size 1.5s;
 }
-@keyframes pastfuture {
-    45% {font-size: 5rem;}
-    100% {font-size: 5rem;}
+.hover:hover{
+    font-size: 4rem;
 }
 
-@keyframes rewindpastanim {     /* makes rewind image move to the left when hovering over 'past' (hover handled in js not css) */
-    100% {left: 0%}
-}
-@keyframes ffwdfutureanim {     /* makes ffwd image move to the right when hovering over 'future' (hover handled in js not css) */
-    100% {left: 0%}
-}
-@keyframes gradientscrollleft {     /* moves background gradient left when hovering over 'past' (hover handled in js not css) */
-    0% {background-position: 50% 0%;}
-	100% {background-position: 100% 0%;}
-}
-@keyframes gradientscrollright {    /* moves background gradient right when hovering over 'future' (hover handled in js not css) */
-    0% {background-position: 50% 0%;}
-	100% {background-position: 0% 0%;}
-}
 .whentotext {
     color: rgba(255, 255, 255, 0);
     transition: color 2s;
@@ -483,8 +469,8 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
         display: block;
         top: 4.5%;
         right: 0px;
-        background-color: var(--col3);
-        padding-left: 5px;
+        background-color: inherit;
+        padding-left: 7px;
     }
     .navbarliitem {
         text-align: left;
