@@ -11,6 +11,7 @@ const mainPage = document.getElementById("mainpage");  //all scrolling is done o
 const pastPage = document.getElementById("pastpage");
 const futurePage = document.getElementById("futurepage");
 const formPage = document.getElementById("contactpage");
+const aboutPage = document.getElementById("aboutpage");
 const navbarItems = document.getElementsByClassName("navbarliitem");
 const burgerMenu = document.getElementById("burgermenuicon");
 let viewportHeight = window.innerHeight - window.innerHeight/2.5; //gets viewport height minus 10% of viewrport height
@@ -38,7 +39,7 @@ mainPage.addEventListener("scroll", e => {  //Hide navbar when on landing page o
     if (mainPage.scrollTop>=viewportHeight || mobile) navContainer.classList.remove("hidden"); //shows navbar once you scroll to bottom of landing page or  always on mobile
     else navContainer.classList.add("hidden"); //hides navbar when on landing page and not on mobile
     /* handles background colour of navbar should restructure */
-    if (formPage.getBoundingClientRect().top < viewportHeight) navContainer.classList.add("landingpagecolour"); //checks if formpage is in view
+    if (aboutPage.getBoundingClientRect().top < viewportHeight) navContainer.classList.add("landingpagecolour"); //checks if formpage is in view
     else if (futurePage.getBoundingClientRect().top < viewportHeight) { //checks if future page is in view
         navContainer.classList.remove("landingpagecolour");
         navContainer.style.backgroundColor = "var(--futurecolour)"; 
