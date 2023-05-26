@@ -74,24 +74,16 @@ function positionTimeSymbols() {  // positions rewind and ffwd symbols based on 
     ffwdSymbol.style.top = (whenTo.getBoundingClientRect().height + (whenTo.getBoundingClientRect().height)/2) + "px"   //moves ffwd top by height of whento
     rewindSymbol.style.top = (whenTo.getBoundingClientRect().height + (whenTo.getBoundingClientRect().height)/2)*-1 + "px" //moves rewind bottom by height of whento
 }
-let whenToButtonStatus = false;
-// whenTo.addEventListener("click",showHideWebDescription);
-
 whenTo.addEventListener("mouseover", e => { //shows web-description on hover
-    if (!whenToButtonStatus) {
         webDescription.classList.add("whentotexthover");
-    }
 })
 whenTo.addEventListener("mouseleave", e => { //hides web-description when mouse leaves
-    if (!whenToButtonStatus) {
         webDescription.classList.remove("whentotexthover");
-    }
 })
-webDescriptionToggle.addEventListener("click", e => { //toggles web-description being visible. overides event listeners above
-    whenToButtonStatus = !whenToButtonStatus;
+webDescriptionToggle.addEventListener("click", e => { //toggles web-description being visible. overides event listeners above    
     webDescription.classList.toggle("whentotexttoggled");
     webDescription.ariaExpanded = !webDescription.ariaExpanded;
-    console.log("here");
+    console.log(webDescription.ariaExpanded);
 });
 landingPast.addEventListener("mouseover",e => {     //makes rewind image and background gradient move left on hover
     // rewindSymbol.style.animation = "rewindpastanim 1s forwards";
