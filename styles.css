@@ -484,8 +484,8 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
     .burgermenuexpanded {
         position: fixed;
         display: block;
-        top: 4.5%;
-        right: 0px;
+        top: 55px;
+        right: 23px;
         background-color: inherit;
         padding-left: 7px;
     }
