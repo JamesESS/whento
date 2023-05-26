@@ -29,6 +29,7 @@ addEventListener("resize",e => {    //resizes navbar when window is resized & co
 resizeNavBar();
 function resizeNavBar() {  //makes navbar same width as main to avoid overlapping scroll bar
     navContainer.style.width = (pastPage.getBoundingClientRect().width + "px");
+    navContainer.children[1].style.right = (window.innerWidth - pastPage.getBoundingClientRect().width + 6) + "px"; //shifts expanded menu right to line up. doing directly in style sheet gives different positions between chrome & firefox
 }
 function updateViewportHeight() {
     viewportHeight = window.innerHeight - window.innerHeight/2.5;
