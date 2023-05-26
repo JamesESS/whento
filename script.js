@@ -75,20 +75,16 @@ function positionTimeSymbols() {  // positions rewind and ffwd symbols based on 
     rewindSymbol.style.top = (whenTo.getBoundingClientRect().height + (whenTo.getBoundingClientRect().height)/2)*-1 + "px" //moves rewind bottom by height of whento
 }
 whenTo.addEventListener("mouseover", e => { //shows web-description on hover
-    if (!webDescription.className.includes("whentotexttoggled")) {
-        webDescription.style.color = "rgba(255, 255, 255, 1)"; //exits event listener if button toggled otherwise continue with intedned func
-        webDescription.style.backgroundColor = "var(--fade)";
-    }
+        webDescription.classList.add("whentotexthover");
 })
 whenTo.addEventListener("mouseleave", e => { //hides web-description when mouse leaves
-    if (!webDescription.className.includes("whentotexttoggled")) {
-        webDescription.style.color = "rgba(255, 255, 255, 0)";
-        webDescription.style.backgroundColor = "transparent";
-    }
+        webDescription.classList.remove("whentotexthover");
 })
-webDescriptionToggle.addEventListener("click", e => { //toggles web-description being visible. overides event listeners above
+webDescriptionToggle.addEventListener("click", e => { //toggles web-description being visible. overides event listeners above    
     webDescription.classList.toggle("whentotexttoggled");
-})
+    webDescription.ariaExpanded = !webDescription.ariaExpanded;
+    console.log(webDescription.ariaExpanded);
+});
 landingPast.addEventListener("mouseover",e => {     //makes rewind image and background gradient move left on hover
     // rewindSymbol.style.animation = "rewindpastanim 1s forwards";
     // landingContainer.style.animation = "gradientscrollleft 1s forwards"

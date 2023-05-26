@@ -200,6 +200,9 @@ a {
     filter: invert(0.87);
     transition: left 1.5s;
 }
+#when2btn {
+    align-items: center;
+}
 .removebtnstyling {
     background-color: transparent;
     border: 0;
@@ -226,6 +229,12 @@ a {
     border-radius: 9999px;
 }
 .whentotexttoggled {
+    color: rgba(255, 255, 255, 1);
+    background-color: var(--fade);
+    /* box-shadow: 0 0 0 1px var(--col4);
+    border-radius: 9999px; */
+}
+.whentotexthover {
     color: rgba(255, 255, 255, 1);
     background-color: var(--fade);
     /* box-shadow: 0 0 0 1px var(--col4);
