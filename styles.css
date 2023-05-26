@@ -220,11 +220,16 @@ a {
     color: rgba(255, 255, 255, 0);
     background-color: transparent;
     height: fit-content;
+    width: inherit;
     transition: color 2s, background-color 2s;
+    /* text-align: center; */
+    border-radius: 9999px;
 }
 .whentotexttoggled {
     color: rgba(255, 255, 255, 1);
     background-color: var(--fade);
+    /* box-shadow: 0 0 0 1px var(--col4);
+    border-radius: 9999px; */
 }
 .left { /* not being used by anything delete? unless Tess is using*/
     background-color: var(--pastcolour);
@@ -477,5 +482,13 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
     }
     .navbarliitem {
         text-align: left;
+    }
+    .landinggrid {
+        grid-template-areas: 
+        ". . ."
+        "past whento future"
+        "description description description"
+        ;
+        
     }
 }
