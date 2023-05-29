@@ -143,7 +143,7 @@ setInterval(drawClock, 1000);
 
 function drawClock() {
   ctx.arc(0, 0, radius, 0 , 2 * Math.PI);
-  ctx.fillStyle = "white";
+  ctx.fillStyle = "#ffc1cfa0";
   ctx.fill();
 }
 
@@ -156,20 +156,20 @@ var grad;
 
 ctx.beginPath();
 ctx.arc(0, 0, radius, 0, 2 * Math.PI);
-ctx.fillStyle = 'white';
+ctx.fillStyle = '#ffc1cfa0';
 ctx.fill();
 
 grad = ctx.createRadialGradient(0, 0 ,radius * 0.95, 0, 0, radius * 1.05);
-grad.addColorStop(0, '#333');
-grad.addColorStop(0.5, 'white');
-grad.addColorStop(1, '#333');
+grad.addColorStop(0, '#e0e0e2');
+grad.addColorStop(0.5, '#ffc1cfa0');
+grad.addColorStop(1, '#e0e0e2');
 ctx.strokeStyle = grad;
 ctx.lineWidth = radius*0.1;
 ctx.stroke();
 
 ctx.beginPath();
 ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
-ctx.fillStyle = '#333';
+ctx.fillStyle = '#7389ae';
 ctx.fill();
 }
 
@@ -181,7 +181,7 @@ function drawClock() {
 function drawNumbers(ctx, radius) {
 var ang;
 var num;
-ctx.font = radius * 0.15 + "px arial";
+ctx.font = radius * 0.15 + "px Times New Roman";
 ctx.textBaseline = "middle";
 ctx.textAlign = "center";
 for(num = 1; num < 13; num++){
