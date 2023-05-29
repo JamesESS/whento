@@ -526,6 +526,9 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
         padding-left:10%;
         padding-right:10%
     }
+    .maxheight {
+        height: 200vh;
+    }
 }
 
 .time-dig{
