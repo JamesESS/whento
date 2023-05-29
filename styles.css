@@ -26,6 +26,7 @@ h1,h2{
 h2{
     background-color: var(--fade);
     box-shadow: 0 0 0 1px var(--col4);
+    margin-top: 5px;
 }
 
 body {
