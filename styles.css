@@ -459,10 +459,10 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
 .img{
     display: block;
     margin: auto;
-    width:50%
 }
 
 @media screen and (max-width: 768px) {
+
     .page{
         padding-left:20%;
         padding-right:20%
@@ -518,6 +518,9 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
 }
 
 @media screen and (max-width: 381px) {
+    *{
+        font-size: xx-small;
+    };
     .page{
         padding-left:10%;
         padding-right:10%
