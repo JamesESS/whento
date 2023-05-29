@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <script src="script.js" defer></script>
     <title>When To?</title>
 </head>
@@ -45,70 +46,55 @@
 
         <section class="past page stack-lg maxheight" id="pastpage">
             <h2 class="centered pageheading"><pre> past </pre>  </h2>
-            <div>
-                <span class="row">
-                    <img href="" alt="Image of Tess traveling through time">
-                    <div class="roundedsquare-bl">
-                        <p class="textright">Travelling Tess, a seasoned time explorer, possesses an unmatched passion for unraveling the mysteries of the past. With her extensive knowledge of historical events and civilizations, Tess can guide you through the annals of time, immersing you in the richness of bygone eras. From the grandeur of ancient civilizations to the intellectual awakening of the Renaissance, Tess will ensure you experience history like never before.
-                        </p>
-                    </div>
-                </span>
+            <canvas id="canvas" class="img" width="200em" height="200em" style="background-color:transparent"></canvas><br><br>
+            <div class="roundedsquare-bl">
+                <p class="centertext">Travelling Tess, a seasoned time explorer, possesses an unmatched passion for unraveling the mysteries of the past. With her extensive knowledge of historical events and civilizations, Tess can guide you through the annals of time, immersing you in the richness of bygone eras. From the grandeur of ancient civilizations to the intellectual awakening of the Renaissance, Tess will ensure you experience history like never before.
+                </p>
             </div>
-            <div>
-                <span class="centered">
-                    <p class="roundedsquare">Our agency's mission is to provide you with transformative experiences through the power of time travel. We believe that by revisiting the past, correcting mistakes, or exploring alternative futures, you can gain valuable insights, broaden your horizons, and shape a better present. Whether you seek personal growth, historical immersion, or an exhilarating adventure, we have the perfect time travel service tailored to your desires.<br>With our time travel services, you can choose from a variety of captivating experiences. Our "Historical Adventures" category allows you to witness pivotal moments in history, walk alongside iconic figures, and gain a deeper understanding of the past.
-                    </p>
-                </span>
+            <div class="centered centertext">
+                <p class="roundedsquare">Our agency's mission is to provide you with transformative experiences through the power of time travel. We believe that by revisiting the past, correcting mistakes, or exploring alternative futures, you can gain valuable insights, broaden your horizons, and shape a better present. Whether you seek personal growth, historical immersion, or an exhilarating adventure, we have the perfect time travel service tailored to your desires.<br>With our time travel services, you can choose from a variety of captivating experiences. Our "Historical Adventures" category allows you to witness pivotal moments in history, walk alongside iconic figures, and gain a deeper understanding of the past.
+                </p>
             </div>
         </section>
 
         <section class="future page stack-lg maxheight" id="futurepage">
-            <h2 class="centered pageheading"><pre> future </pre>  </h2>
-            <div>
-                <span class="row">
-                    <p class="textleft roundedsquare-br">
-                        Journeying James, is an intrepid adventurer with a vision that extends far into the future. His keen sense of curiosity and technological prowess allow him to navigate the uncharted territories of tomorrow. With James as your guide, you can witness technological marvels, explore futuristic landscapes, and gain a glimpse into the possibilities that lie ahead. Together, Tess and James form an unbeatable duo, ready to accompany you on your time travelling escapades.
-                    </p>
-                    <img href="" alt="Image of James traveling through time">
-                </span>
+            <h2 class="centered pageheading"><pre> future </pre>  </h2><br><br>
+            <h1 class="roundedsquare time-dig" id="current-time"></h1><br><br>
+            <div class="roundedsquare-br">
+                <p class="centertext">
+                    Journeying James, is an intrepid adventurer with a vision that extends far into the future. His keen sense of curiosity and technological prowess allow him to navigate the uncharted territories of tomorrow. With James as your guide, you can witness technological marvels, explore futuristic landscapes, and gain a glimpse into the possibilities that lie ahead. Together, Tess and James form an unbeatable duo, ready to accompany you on your time travelling escapades.
+                </p>
             </div>
-            <div>
-                <span class="centered">
-                    <p class="roundedsquare">
-                        Our agency's mission is to provide you with transformative experiences through the power of time travel. We believe that by exploring the future, you can expand your horizons, ignite your imagination, and shape a better present. Whether you seek technological marvels, societal evolution, or an exhilarating adventure, we have the perfect time travel service tailored to your desires.
-                        <br>With our time travel services, you can choose from a variety of captivating experiences. Our "Future Explorations" will take you to breathtaking realms where technological advancements and new societies await your discovery.
-                    </p>
-                </span>
+            <div class="centered centertext">
+                <p class="roundedsquare">
+                    Our agency's mission is to provide you with transformative experiences through the power of time travel. We believe that by exploring the future, you can expand your horizons, ignite your imagination, and shape a better present. Whether you seek technological marvels, societal evolution, or an exhilarating adventure, we have the perfect time travel service tailored to your desires.
+                    <br>With our time travel services, you can choose from a variety of captivating experiences. Our "Future Explorations" will take you to breathtaking realms where technological advancements and new societies await your discovery.
+                </p>
             </div>
         </section>
 
         <section class="page stack-lg maxheight" id="aboutpage">
-            <h2 class="centered pageheading"><pre> more about time travel... </pre>  </h2>
+            <h2 class="centered pageheading"><pre> more about time travel... </pre>  </h2><br><br>
             <div>
-                <span class="row">
-                    <p class="textleft">
+                    <p class="centertext roundedsquare">
                         For those seeking a second chance or an opportunity to rectify past mistakes, our "Personal Redo" service allows you to revisit pivotal moments in your life, providing a chance to rewrite history and set a new course. Additionally, our "Consciousness Expansion" service invites you to transcend time and explore the depths of your own consciousness, unlocking profound insights and self-discovery.
                     </p>
-                    <img href="" alt="Imagsdfsdfsdfsdfdsesdfsdfe">
-                </span>
+                    <!-- <img href="" alt="Imagsdfsdfsdfsdfdsesdfsdfe"> -->
             </div>
-            <div>
-                <span class="centered">
-                    <p class="roundedsquare2">
-                        Travelling Tess, Journeying James, and our entire team of experienced time travel guides are committed to ensuring your safety and satisfaction throughout your time travel journey. We meticulously plan each trip, taking into account historical accuracy, ethical considerations, and the preservation of the space-time continuum.
-                    <br>
-                        Join us in unlocking the secrets of time travel and embark on a transformative adventure that will reshape your perception of the world. Let us guide you through the annals of history on one side and propel you into the possibilities of the future on the other. Contact us today and embark on an extraordinary journey with Travelling Tess and Journeying James. Together, we'll redefine what it means to travel through time.
-                    </p>
-                </span>
+            <div class="centered">
+                <p class="roundedsquare2">
+                    Travelling Tess, Journeying James, and our entire team of experienced time travel guides are committed to ensuring your safety and satisfaction throughout your time travel journey. We meticulously plan each trip, taking into account historical accuracy, ethical considerations, and the preservation of the space-time continuum.
+                <br>
+                    Join us in unlocking the secrets of time travel and embark on a transformative adventure that will reshape your perception of the world. Let us guide you through the annals of history on one side and propel you into the possibilities of the future on the other. Contact us today and embark on an extraordinary journey with Travelling Tess and Journeying James. Together, we'll redefine what it means to travel through time.
+                </p>
             </div>
         </section>
 
     <section class="centered maxheight" id="contactpage"> 
-        <!-- prevent default -->
         <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
             <div class="formHeader">
-                <button id="pastFormButton" type="button" style="width:5rem" onclick="pastClick()" aria-label="Selects the form for wanting to go to the past"><h1>past</h1></button>        
-                <button id="futureFormButton" type="button" style="width:5rem" onclick="futureClick()" aria-label="Selectd the form for wanting to go to the future"><h1>future</h1></button>        
+                <button id="pastFormButton" type="button" style="width:8rem" onclick="pastClick()" aria-label="Selects the form for wanting to go to the past"><h1>past</h1></button>        
+                <button id="futureFormButton" type="button" style="width:8rem" onclick="futureClick()" aria-label="Selectd the form for wanting to go to the future"><h1>future </h1></button>        
             </div>
             <fieldset class="pastForm" id="your-expert-t" style="display:none" aria-labelledby="legend-travelling-tess">
                 <legend>Your time travelling expert is...</legend>
