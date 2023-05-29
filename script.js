@@ -229,3 +229,24 @@ ctx.lineTo(0, -length);
 ctx.stroke();
 ctx.rotate(-pos);
 }
+
+//for digital clock
+
+let time=document.getElementById("current-time");
+
+setInterval(()=>{
+    let d = new Date();
+    time.innerHTML = d.toLocaleTimeString();
+},1000)
+
+function toggle(elementId,btnid) {
+  const element = document.getElementById(elementId);
+  const btn = document.getElementById(btnid);
+  if (element.style.display === "none") {
+    element.style.display = "block";
+    btn.innerHTML="Hide"
+  } else {
+    element.style.display = "none";
+    btn.innerHTML="Read more"
+  }
+}

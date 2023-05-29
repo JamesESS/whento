@@ -526,3 +526,7 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
         padding-right:10%
     }
 }
+
+.time-dig{
+    font-size: xx-large;
+    font-family: 'Orbitron', sans-serif;}
