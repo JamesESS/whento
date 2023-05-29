@@ -331,7 +331,6 @@ section{
 }
 
 form{
-    scroll-snap-align: end;
     background-color:var(--pastcolour);
     padding:30px;
     border-radius: 25px;
@@ -457,9 +456,11 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
     display:none;
 }
 
-.img{
+#canvas{
     display: block;
     margin: auto;
+    background-color:transparent;
+    width:100%
 }
 
 @media screen and (max-width: 768px) {
@@ -516,18 +517,24 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
         ;
         
     }
+    #canvas{
+        width:50%
+    }
 }
 
 @media screen and (max-width: 400px) {
     *{
-        font-size: xx-small;
+        font-size: x-small;
     };
     .page{
         padding-left:10%;
         padding-right:10%
     }
-    .maxheight {
-        height: 200vh;
+    /* .maxheight {
+        height: 0vh;
+    } */
+    #canvas{
+        width:25%
     }
 }
 
