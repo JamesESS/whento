@@ -6,7 +6,7 @@
 4. [Building](#Building)
 5. [Debugging](#Debugging)
 6. [Learnings](#Learnings)
-7. [Future Improvements](#Future Improvements)
+7. [Future Improvements](<#Future Improvements>)
 ## What
 ***
 This repo contains the company site for our time travel agency. The site aims to tell a little bit about the company itself, the people at the company and allow people to get in touch if they'd like to use our services
@@ -65,3 +65,4 @@ It's been a great opportunity to learn more about git and how you might work on 
 There were a few browser incompatibilities between browsers and edge cases with certain mobile devices not styling correctly. It showed the importance of rigourous testing and avoiding the *'it works on my machine'* menatility.
 ## Future Improvements
 ***
+I'm sure there's more that could be done to make sure everybody can easily use & navigate our webpage. It will be intresting to come back and look at how the accessibility can be improved once we've learnt more.
