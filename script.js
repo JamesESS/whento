@@ -239,6 +239,8 @@ setInterval(()=>{
     time.innerHTML = d.toLocaleTimeString();
 },1000)
 
+//to show and hide who your traveller is
+
 function toggle(elementId,btnid) {
   const element = document.getElementById(elementId);
   const btn = document.getElementById(btnid);
