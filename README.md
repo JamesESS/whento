@@ -6,7 +6,8 @@
 4. [Building](#Building)
 5. [Debugging](#Debugging)
 6. [Learnings](#Learnings)
-7. [Future Improvements](<#Future Improvements>)
+7. [Future Improvements](#future-improvements)
+8. [Checklist](#checklist)
 ## What
 ***
 This repo contains the company site for our time travel agency. The site aims to tell a little bit about the company itself, the people at the company and allow people to get in touch if they'd like to use our services
@@ -46,7 +47,7 @@ All of these had little effects or animations and were effected by user input. W
 ***
 We set up a [github projects page](https://github.com/users/JamesESS/projects/2) split the site into smaller issues and got to work.  
 We built out the sections of the page and used placeholder *lorem ipsum* so we could get an idea of how the site would flow.
-
+!! could do with more here (kinda links with checklist??)!!
 ## Debugging
 ***
 - Pretty early on we got some big merge conflicts that caused sections of CSS to repeat. To help avoid this in the future we agreed to try and keep everything in distinct sections, improve our modular CSS and push code regularly so any future conflicts would have less to wade through.  
@@ -66,3 +67,27 @@ There were a few browser incompatibilities between browsers and edge cases with 
 ## Future Improvements
 ***
 I'm sure there's more that could be done to make sure everybody can easily use & navigate our webpage. It will be intresting to come back and look at how the accessibility can be improved once we've learnt more.
+## Checklist
+- [x] An introduction to our agency and what we provide
+    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+- [x] Information about the members of our team
+    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+- [x] A way to get in touch if they wanted to use our service
+    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+- [x] Our form needed to have some form of validation to ensure required fields 
+were filled in correctly
+    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+- [x] See information about each member of the team
+    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+- [x] Browse the site on mobile, tablet & desktop
+    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+- [x] Click to navigate to different sections of our page
+    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+- [x] Visit the site at a publicly accessible domain name
+    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+- [x] Navigate using keyboard controls
+    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+- [x] Ensure a screenreader picks up all the relevant content on our site
+    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+- [x] Use automatic triggers on Github projects
+    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
