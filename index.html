@@ -91,7 +91,7 @@
         </section>
 
     <section class="centered maxheight" id="contactpage"> 
-        <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
+        <form id="form" method="GET">
             <div class="formHeader">
                 <button id="pastFormButton" type="button" style="width:8rem" onclick="pastClick()" aria-label="Selects the form for wanting to go to the past"><h1>past</h1></button>        
                 <button id="futureFormButton" type="button" style="width:8rem" onclick="futureClick()" aria-label="Selectd the form for wanting to go to the future"><h1>future </h1></button>        
@@ -121,13 +121,13 @@
 
 
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" />
+            <input id="name" name="name" type="text" required/>
     
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" />
+            <input id="email" name="email" type="email" required/>
     
             <label for="tel">Telephone</label>
-            <input id="tel" name="tel" type="tel" />
+            <input id="tel" name="tel" type="tel" required pattern="[0-9]{9,12}" title="Phone number must be at least 9 digits long"/>
     
             <fieldset>
             <legend>Preferred contact method</legend>
