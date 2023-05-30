@@ -11,6 +11,7 @@
     box-sizing: border-box;
     margin: 0px;
     font-family: "Gill Sans", sans-serif;
+    /* min-width: 210px; */
 }
 
 h1,h2{
@@ -19,13 +20,13 @@ h1,h2{
     border-radius: 9999px;
     width: fit-content;
     margin:auto;
-    padding:5px;
 }
 
 h2{
     background-color: var(--fade);
     box-shadow: 0 0 0 1px var(--col4);
     margin-top: 5px;
+    padding:5px;
 }
 
 body {
@@ -262,8 +263,8 @@ padding:5px; */
 .page{
     padding-left:20%;
     padding-right:20%;
-        /* margin-top: 20%; */
 }
+
 .past {
     background-color: var(--pastcolour);
 }
@@ -334,7 +335,7 @@ section{
 
 form{
     background-color:var(--pastcolour);
-    padding:30px;
+    padding:20px;
     border-radius: 25px;
     margin: auto;
     border: 2px solid var(--col3);
@@ -410,17 +411,17 @@ content: "✔︎";
 }
 
 form > * + * {
-margin-top: 1.5rem;
+margin-top: 1rem;
 }
 
 fieldset > * + * {
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
 }
 
 input,
 textarea {
-    margin-top: 0.5rem;
-    padding: 0.5rem 0.5rem;
+    margin-top: 0.3rem;
+    padding: 0.3rem 0.3rem;
 }
 
 button {
@@ -463,81 +464,6 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
     margin: auto;
     background-color:transparent;
     width:20em
-}
-
-@media screen and (max-width: 768px) {
-
-    .page{
-        padding-left:20%;
-        padding-right:20%
-    }
-    form > * + * {
-        margin-top: 0.5rem;
-    }
-    
-    fieldset > * + * {
-        margin-top: 0.1rem;
-    }
-    
-    input,
-    textarea {
-        margin-top: 0.3rem;
-        padding: 0.3rem 0.3rem;
-    }
-    
-    button {
-        padding: 0.25rem 0.2rem;
-        background-color: var(--col5);
-        transition: background-color 0.2s;
-    }
-
-    #mobilecheck {display: none;}
-    .navbarlist {
-        display: none;
-    }
-    .navbaricon {
-        display: block;
-        padding-right: 10px;
-        padding-bottom: 10px;
-    }
-    .burgermenuexpanded {
-        position: fixed;
-        display: block;
-        top: 55px;
-        right: 23px;
-        background-color: inherit;
-        padding-left: 7px;
-    }
-    .navbarliitem {
-        text-align: left;
-    }
-    .landinggrid {
-        grid-template-areas: 
-        ". . ."
-        "past whento future"
-        "description description description"
-        ;
-        
-    }
-    #canvas{
-        width:50%
-    }
-}
-
-@media screen and (max-width: 450px) {
-    *{
-        font-size: x-small;
-    };
-    .page{
-        padding-left:10%;
-        padding-right:10%
-    }
-    /* .maxheight {
-        height: 0vh;
-    } */
-    #canvas{
-        width:25%
-    }
 }
 
 .time-dig{

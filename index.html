@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
+    <link href="media.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <script src="script.js" defer></script>
@@ -52,7 +53,8 @@
                 </p>
             </div>
             <div class="centered centertext">
-                <p class="roundedsquare">Our agency's mission is to provide you with transformative experiences through the power of time travel. We believe that by revisiting the past, correcting mistakes, or exploring alternative futures, you can gain valuable insights, broaden your horizons, and shape a better present. Whether you seek personal growth, historical immersion, or an exhilarating adventure, we have the perfect time travel service tailored to your desires.<br>With our time travel services, you can choose from a variety of captivating experiences. Our "Historical Adventures" category allows you to witness pivotal moments in history, walk alongside iconic figures, and gain a deeper understanding of the past.
+                <p class="roundedsquare">Our agency's mission is to provide you with transformative experiences through the power of time travel. We believe that by revisiting the past, correcting mistakes, or exploring alternative futures, you can gain valuable insights, broaden your horizons, and shape a better present.
+                    <br>With our time travel services, you can choose from a variety of captivating experiences. Our "Historical Adventures" category allows you to witness pivotal moments in history, walk alongside iconic figures, and gain a deeper understanding of the past.
                 </p>
             </div>
         </section>
@@ -91,11 +93,13 @@
         </section>
 
     <section class="centered maxheight" id="contactpage"> 
-        <form id="form" method="GET">
+        <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
             <div class="formHeader">
                 <button id="pastFormButton" type="button" style="width:8rem" onclick="pastClick()" aria-label="Selects the form for wanting to go to the past" tabindex="9"><h1>past</h1></button>        
                 <button id="futureFormButton" type="button" style="width:8rem" onclick="futureClick()" aria-label="Selectd the form for wanting to go to the future" tabindex="10"><h1>future </h1></button>        
             </div>
+            <span id="flex_cont">
+            <span id="col1">
             <fieldset class="pastForm" id="your-expert-t" style="display:none" aria-labelledby="legend-travelling-tess">
                 <legend>Your time travelling expert is...</legend>
                 <input id="expert-t" type="radio" name="expert" value="tess" checked aria-labelledby="legend-travelling-tess"/>
@@ -121,14 +125,18 @@
 
 
             <label for="name">Name</label>
+
             <input id="name" name="name" type="text" required tabindex="13"/>
     
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" required tabindex="14" />
+            <input id="email" name="email" type="email" required tabindex="14"/>
     
             <label for="tel">Telephone</label>
             <input id="tel" name="tel" type="tel" required pattern="[0-9]{9,12}" title="Phone number must be at least 9 digits long" tabindex="15"/>
-    
+            </span>
+            <span id="colmid"></span>
+            <span id="col2">
+
             <fieldset>
             <legend>Preferred contact method</legend>
     
@@ -147,9 +155,11 @@
     
             <input id="marketingConsent" name="marketingConsent" type="checkbox" tabindex="20"/>
             <label for="marketingConsent" class="checkbox">Give me updates on what year it is for you</label>
-    
+            </span>
             <button id="submit" type="submit" tabindex="21"><h1>submit</h1></button>
-      </form>
+            </span>
+        </form>
+
     </section>   
     </main>
     <span id="mobilecheck"></span>
