@@ -1,0 +1,177 @@
+/* need to work out how to say the width categorically can never be less than 230 */
+/* 230 */
+
+@media only screen and (min-width: 960px) {
+    /* styles for browsers larger than 960px; */
+    *{
+        /* font-size:10px */
+    }
+}
+@media only screen and (min-width: 1440px) {
+    /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+    /* for sumo sized (mac) screens */
+}
+@media screen and (max-width: 480px) and (min-width:280px){ 
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    /* originally had it as max-device-width but max-width is more versatile */
+    #canvas{
+        width:50%
+    }
+    *{
+        font-size: x-small;
+    };
+    .page{
+        padding-left:1%;
+        padding-right:1%;
+    }
+    form > * + * {
+        margin-top: 0.5rem;
+    }
+    fieldset > * + * {
+        margin-top: 0.1rem;
+    }
+    .time-dig{
+        font-size: xx-small;}
+    form{
+        margin-top: 5px;
+        padding:5px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* default iPad screens */
+}
+/* different techniques for iPad screening */
+@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
+}
+
+/* @media screen and (max-width: 1000px) {
+    #canvas{
+        width:50%
+    }
+    *{
+        font-size: small;
+    };
+    .page{
+        padding-left:20%;
+        padding-right:20%
+    }
+    form > * + * {
+        margin-top: 0.5rem;
+    }
+    fieldset > * + * {
+        margin-top: 0.1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #canvas{
+        width:50%
+    }
+    *{
+        font-size: x-small;
+    };
+    .page{
+        padding-left:20%;
+        padding-right:20%
+    }
+
+
+    form > * + * {
+        margin-top: 0.5rem;
+    }
+    
+    fieldset > * + * {
+        margin-top: 0.1rem;
+    }
+    
+    input,
+    textarea {
+        margin-top: 0.3rem;
+        padding: 0.3rem 0.3rem;
+    }
+    
+    button {
+        padding: 0.25rem 0.2rem;
+        background-color: var(--col5);
+        transition: background-color 0.2s;
+    }
+
+    #mobilecheck {display: none;}
+    .navbarlist {
+        display: none;
+    }
+    .navbaricon {
+        display: block;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    .burgermenuexpanded {
+        position: fixed;
+        display: block;
+        top: 55px;
+        right: 23px;
+        background-color: inherit;
+        padding-left: 7px;
+    }
+    .navbarliitem {
+        text-align: left;
+    }
+    .landinggrid {
+        grid-template-areas: 
+        ". . ."
+        "past whento future"
+        "description description description"
+        ;
+        
+    }
+}
+
+@media screen and (max-width: 450px) {
+    *{
+        font-size: x-small;
+    };
+    .page{
+        padding-left:10%;
+        padding-right:10%
+    }
+    #canvas{
+        width:25%
+    }
+        /* .maxheight {
+        height: 0vh;
+    } */
+}
+
+@media screen and (max-width: 261px) {
+    #canvas{
+        width:50%
+    }
+    *{
+        font-size: xx-small;
+    };
+    .page{
+        padding-left:5%;
+        padding-right:5%
+    }
+    form > * + * {
+        margin-top: 0.5rem;
+    }
+    fieldset > * + * {
+        margin-top: 0.1rem;
+    }
+    .time-dig{
+        font-size: xx-small;}
+    form{
+        margin-top: 5px;
+        padding:5px;
+    }
+} */

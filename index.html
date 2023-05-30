@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
+    <link href="media.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <script src="script.js" defer></script>
@@ -15,14 +16,14 @@
     <main class="stack-xl scroll-container landingpagecolour" id="mainpage">
         <header class="fixed">
             <navbar class="hidden stickyheader row spacebetween" id="navbarcontainer">
-                <span class="navtitle navlink">
-                    <a href="javascript:;"> whento? </a>
+                <span class="navtitle">
+                    <p> whento? </p>
                 </span>
                 <ul class="navbarlist row">
-                    <li class="navbarliitem navlink"><a href="javascript:;">past</a></li>
-                    <li class="navbarliitem navlink"><a href="javascript:;">future</a></li>
-                    <li class="navbarliitem navlink"><a href="javascript:;">about</a></li>
-                    <li class="navbarliitem navlink"><a href="javascript:;">contact</a></li>
+                    <li class="navbarliitem"><a href="javascript:;">past</a></li>
+                    <li class="navbarliitem"><a href="javascript:;">future</a></li>
+                    <li class="navbarliitem"><a href="javascript:;">about</a></li>
+                    <li class="navbarliitem"><a href="javascript:;">contact</a></li>
                 </ul>
                 <a href="javascript:;" class="navbaricon" id="burgermenuicon" aria-label="opens burger menu" aria-expanded="false">menu <i class="fa fa-bars" aria-hidden="true"></i></a>
             </navbar>
@@ -91,7 +92,7 @@
         </section>
 
     <section class="centered maxheight" id="contactpage"> 
-        <form id="form" method="GET">
+        <form id="form" action="https://learn-forms.netlify.com/submit/part3" method="GET">
             <div class="formHeader">
                 <button id="pastFormButton" type="button" style="width:8rem" onclick="pastClick()" aria-label="Selects the form for wanting to go to the past"><h1>past</h1></button>        
                 <button id="futureFormButton" type="button" style="width:8rem" onclick="futureClick()" aria-label="Selectd the form for wanting to go to the future"><h1>future </h1></button>        
@@ -121,13 +122,13 @@
 
 
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" required/>
+            <input id="name" name="name" type="text" />
     
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" required/>
+            <input id="email" name="email" type="email" />
     
             <label for="tel">Telephone</label>
-            <input id="tel" name="tel" type="tel" required pattern="[0-9]{9,12}" title="Phone number must be at least 9 digits long"/>
+            <input id="tel" name="tel" type="tel" />
     
             <fieldset>
             <legend>Preferred contact method</legend>

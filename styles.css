@@ -12,6 +12,7 @@
     margin: 0px;
     cursor: default; /* should probably remove this to improve accessibility */
     font-family: "Gill Sans", sans-serif;
+    /* min-width: 210px; */
 }
 
 h1,h2{
@@ -461,81 +462,6 @@ input[type="radio"] .tab:after,input[type="checkbox"].tab:after{
     margin: auto;
     background-color:transparent;
     width:20em
-}
-
-@media screen and (max-width: 768px) {
-
-    .page{
-        padding-left:20%;
-        padding-right:20%
-    }
-    form > * + * {
-        margin-top: 0.5rem;
-    }
-    
-    fieldset > * + * {
-        margin-top: 0.1rem;
-    }
-    
-    input,
-    textarea {
-        margin-top: 0.3rem;
-        padding: 0.3rem 0.3rem;
-    }
-    
-    button {
-        padding: 0.25rem 0.2rem;
-        background-color: var(--col5);
-        transition: background-color 0.2s;
-    }
-
-    #mobilecheck {display: none;}
-    .navbarlist {
-        display: none;
-    }
-    .navbaricon {
-        display: block;
-        padding-right: 10px;
-        padding-bottom: 10px;
-    }
-    .burgermenuexpanded {
-        position: fixed;
-        display: block;
-        top: 55px;
-        right: 23px;
-        background-color: inherit;
-        padding-left: 7px;
-    }
-    .navbarliitem {
-        text-align: left;
-    }
-    .landinggrid {
-        grid-template-areas: 
-        ". . ."
-        "past whento future"
-        "description description description"
-        ;
-        
-    }
-    #canvas{
-        width:50%
-    }
-}
-
-@media screen and (max-width: 450px) {
-    *{
-        font-size: x-small;
-    };
-    .page{
-        padding-left:10%;
-        padding-right:10%
-    }
-    /* .maxheight {
-        height: 0vh;
-    } */
-    #canvas{
-        width:25%
-    }
 }
 
 .time-dig{
