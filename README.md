@@ -6,7 +6,7 @@
 4. [Building](#Building)
 5. [Debugging](#Debugging)
 6. [Learnings](#Learnings)
-7. [Future Improvements](#FutureImprovements)
+7. [Future Improvements](#Future Improvements)
 ## What
 ***
 This repo contains the company site for our time travel agency. The site aims to tell a little bit about the company itself, the people at the company and allow people to get in touch if they'd like to use our services
