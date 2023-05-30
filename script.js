@@ -252,3 +252,12 @@ function toggle(elementId,btnid) {
     btn.innerHTML="Read more"
   }
 }
+
+// to show thank you for submitting bit
+
+function submitClick(){
+    const theForm = document.getElementById("form");
+    const thanksPage = document.getElementById("thankyoupage");
+    theForm.style.display = "none";
+    thanksPage.style.display="block";
+}
