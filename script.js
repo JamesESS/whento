@@ -12,7 +12,7 @@ const pastPage = document.getElementById("pastpage");
 const futurePage = document.getElementById("futurepage");
 const formPage = document.getElementById("contactpage");
 const aboutPage = document.getElementById("aboutpage");
-const navbarItems = document.getElementsByClassName("navbarliitem");
+const navbarItems = document.getElementsByClassName("navlink");
 const burgerMenu = document.getElementById("burgermenuicon");
 let viewportHeight = window.innerHeight - window.innerHeight/2.5; //gets viewport height minus 10% of viewrport height
 /* ----event listeners for navbar---- */
@@ -34,7 +34,7 @@ function resizeNavBar() {  //makes navbar same width as main to avoid overlappin
 function updateViewportHeight() {
     viewportHeight = window.innerHeight - window.innerHeight/2.5;
 }
-[...navbarItems].forEach((item,i)=> item.addEventListener("click", e => mainPage.scroll(0,window.innerHeight*(i+1))));  //add event listener to each anchor in navbar. when clicked sets main page scroll to that pages y coord. Need to do this way instead of scrollTo as we are scrolling main to make snap scroll work
+[...navbarItems].forEach((item,i)=> item.addEventListener("click", e => mainPage.scroll(0,window.innerHeight*(i))));  //add event listener to each anchor in navbar. when clicked sets main page scroll to that pages y coord. Need to do this way instead of scrollTo as we are scrolling main to make snap scroll work
 /* think event listener scroll is very resource intensive. should maybe change to set interval or some other method instead? */
 mainPage.addEventListener("scroll", e => {  //Hide navbar when on landing page otherwise shows and changes colour depending on page position
     if (mainPage.scrollTop>=viewportHeight || mobile) navContainer.classList.remove("hidden"); //shows navbar once you scroll to bottom of landing page or  always on mobile
