@@ -98,6 +98,8 @@
                 <button id="pastFormButton" type="button" style="width:8rem" onclick="pastClick()" aria-label="Selects the form for wanting to go to the past"><h1>past</h1></button>        
                 <button id="futureFormButton" type="button" style="width:8rem" onclick="futureClick()" aria-label="Selectd the form for wanting to go to the future"><h1>future </h1></button>        
             </div>
+            <span id="flex_cont">
+            <span id="col1">
             <fieldset class="pastForm" id="your-expert-t" style="display:none" aria-labelledby="legend-travelling-tess">
                 <legend>Your time travelling expert is...</legend>
                 <input id="expert-t" type="radio" name="expert" value="tess" checked aria-labelledby="legend-travelling-tess"/>
@@ -130,7 +132,9 @@
     
             <label for="tel">Telephone</label>
             <input id="tel" name="tel" type="tel" />
-    
+            </span>
+            <span id="colmid"></span>
+            <span id="col2">
             <fieldset>
             <legend>Preferred contact method</legend>
     
@@ -149,9 +153,10 @@
     
             <input id="marketingConsent" name="marketingConsent" type="checkbox" />
             <label for="marketingConsent" class="checkbox">Give me updates on what year it is for you</label>
-    
+            </span>
             <button id="submit" type="submit"><h1>submit</h1></button>
-      </form>
+            </span>
+        </form>
     </section>   
     </main>
     <span id="mobilecheck"></span>

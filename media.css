@@ -106,10 +106,6 @@
     *{
         font-size: xx-small;
     };
-    .page{
-        padding-left:1%;
-        padding-right:1%;
-    }
 }
 
 /* different techniques for iPad screening */
@@ -120,6 +116,35 @@
 
 @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation:landscape) {
     /* For landscape layouts only */
+    #canvas{
+        width:10%
+    }
+    /* form{
+        width:150%;
+        margin-left: -25%;
+    } */
+    /* input,
+    textarea,
+    fieldset,
+    button+form{
+    width: 40%;
+    } */
+    /* input+label{
+        diplay:flex
+    } */
+    #flex_cont{
+        display: flex;
+        flex-wrap:wrap;
+    }
+    #col1{
+        flex:49%
+    }
+    #colmid{
+        flex:2%
+    }
+    #col2{
+        flex:49%;
+    }
 }
 
 /* @media screen and (max-width: 1000px) {
