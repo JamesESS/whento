@@ -10,7 +10,6 @@
 * {
     box-sizing: border-box;
     margin: 0px;
-    cursor: default; /* should probably remove this to improve accessibility */
     font-family: "Gill Sans", sans-serif;
     /* min-width: 210px; */
 }
@@ -91,6 +90,9 @@ body {
 
 a {
     color: white;
+}
+a,button {
+    cursor: pointer;
 }
 /* navbar specific */
 
@@ -229,7 +231,7 @@ a {
     transition: color 2s, background-color 2s;
     /* text-align: center; */
     border-radius: 9999px;
-    
+    padding: 15px 35px 15px 35px;
 }
 
 /* max-height:max-content;
