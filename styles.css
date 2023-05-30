@@ -21,13 +21,13 @@ h1,h2{
     border-radius: 9999px;
     width: fit-content;
     margin:auto;
-    padding:5px;
 }
 
 h2{
     background-color: var(--fade);
     box-shadow: 0 0 0 1px var(--col4);
     margin-top: 5px;
+    padding:5px;
 }
 
 body {
@@ -333,7 +333,7 @@ section{
 
 form{
     background-color:var(--pastcolour);
-    padding:30px;
+    padding:20px;
     border-radius: 25px;
     margin: auto;
     border: 2px solid var(--col3);
@@ -409,17 +409,17 @@ content: "✔︎";
 }
 
 form > * + * {
-margin-top: 1.5rem;
+margin-top: 1rem;
 }
 
 fieldset > * + * {
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
 }
 
 input,
 textarea {
-    margin-top: 0.5rem;
-    padding: 0.5rem 0.5rem;
+    margin-top: 0.3rem;
+    padding: 0.3rem 0.3rem;
 }
 
 button {

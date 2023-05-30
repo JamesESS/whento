@@ -1,19 +1,24 @@
 /* need to work out how to say the width categorically can never be less than 230 */
-/* 230 */
+/* 300 */
 
 @media only screen and (min-width: 960px) {
     /* styles for browsers larger than 960px; */
-    *{
-        /* font-size:10px */
+    form > * + * {
+        margin-top: 0.5rem;
+    }
+    fieldset > * + * {
+        margin-top: 0.1rem;
     }
 }
-@media only screen and (min-width: 1440px) {
-    /* styles for browsers larger than 1440px; */
+@media only screen and (max-width: 900px) {
+    /* styles for browsers thinner than 900px; */
+    *{
+        font-size: small;
+    };
+
 }
-@media only screen and (min-width: 2000px) {
-    /* for sumo sized (mac) screens */
-}
-@media screen and (max-width: 480px) and (min-width:280px){ 
+
+@media screen and (max-width: 480px) and (min-width:300px){ 
     /* styles for mobile browsers smaller than 480px; (iPhone) */
     /* originally had it as max-device-width but max-width is more versatile */
     #canvas{
@@ -41,8 +46,72 @@
 }
 
 @media only screen and (max-width: 768px) {
-    /* default iPad screens */
+    #canvas{
+        width:50%
+    }
+    *{
+        font-size: small;
+    };
+    .page{
+        padding-left:1%;
+        padding-right:1%;
+    }
+    #mobilecheck {display: none;}
+    .navbarlist {
+        display: none;
+    }
+    .navbaricon {
+        display: block;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    .burgermenuexpanded {
+        position: fixed;
+        display: block;
+        top: 55px;
+        right: 23px;
+        background-color: inherit;
+        padding-left: 7px;
+    }
+    .navbarliitem {
+        text-align: left;
+    }
+    .landinggrid {
+        grid-template-areas: 
+        ". . ."
+        "past whento future"
+        "description description description"
+        ;
+        
+    }
 }
+
+@media only screen and (max-width: 550px) {
+    #canvas{
+        width:30%
+    }
+    *{
+        font-size: x-small;
+    };
+    .page{
+        padding-left:1%;
+        padding-right:1%;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    #canvas{
+        width:30%
+    }
+    *{
+        font-size: xx-small;
+    };
+    .page{
+        padding-left:1%;
+        padding-right:1%;
+    }
+}
+
 /* different techniques for iPad screening */
 @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation:portrait) {
     /* For portrait layouts only */
@@ -149,7 +218,7 @@
         /* .maxheight {
         height: 0vh;
     } */
-}
+/* }
 
 @media screen and (max-width: 261px) {
     #canvas{
@@ -174,4 +243,4 @@
         margin-top: 5px;
         padding:5px;
     }
-} */
+} */ */
