@@ -345,7 +345,7 @@ form{
 label,
 input,
 button,
-textarea {
+textarea, #flex_cont {
 display: block;
 font: inherit;
 color: inherit;
@@ -410,18 +410,19 @@ color: var(--col5);
 content: "✔︎";
 }
 
-form > * + * {
-margin-top: 1rem;
+form > * + *, #col1  > * + *,#col2 > * + *,#colmid > * + *{
+margin-top: 0.5rem;
 }
 
-fieldset > * + * {
+fieldset > * + *{
     margin-top: 0.2rem;
 }
 
 input,
-textarea {
-    margin-top: 0.3rem;
-    padding: 0.3rem 0.3rem;
+textarea,
+#colmid,#col1,#col2 {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.5rem;
 }
 
 button {
