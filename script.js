@@ -34,7 +34,13 @@ function resizeNavBar() {  //makes navbar same width as main to avoid overlappin
 function updateViewportHeight() {
     viewportHeight = window.innerHeight - window.innerHeight/2.5;
 }
-[...navbarItems].forEach((item,i)=> item.addEventListener("click", e => mainPage.scroll(0,window.innerHeight*(i))));  //add event listener to each anchor in navbar. when clicked sets main page scroll to that pages y coord. Need to do this way instead of scrollTo as we are scrolling main to make snap scroll work
+[...navbarItems].forEach((item,i)=> item.addEventListener("click", e => {
+    mainPage.scroll(0,window.innerHeight*(i)); //changes scroll y position to viewhieght * i
+    if (burgerMenu.ariaExpanded){ //closes burger menu if its open
+        navContainer.children[1].classList.toggle("burgermenuexpanded");  //closes burgermenu
+        burgerMenu.ariaExpanded = !burgerMenu.ariaExpanded; //toggles aria expanded on burger menu
+    }
+}));  //add event listener to each anchor in navbar. when clicked sets main page scroll to that pages y coord. Need to do this way instead of scrollTo as we are scrolling main to make snap scroll work
 /* think event listener scroll is very resource intensive. should maybe change to set interval or some other method instead? */
 mainPage.addEventListener("scroll", e => {  //Hide navbar when on landing page otherwise shows and changes colour depending on page position
     if (mainPage.scrollTop>=viewportHeight || mobile) navContainer.classList.remove("hidden"); //shows navbar once you scroll to bottom of landing page or  always on mobile
@@ -52,8 +58,17 @@ mainPage.addEventListener("scroll", e => {  //Hide navbar when on landing page o
     else navContainer.classList.add("landingpagecolour");
 })
 burgerMenu.addEventListener("click", e => {
+    e.stopPropagation();
     navContainer.children[1].classList.toggle("burgermenuexpanded");  //expands burgermenu
     burgerMenu.ariaExpanded = !burgerMenu.ariaExpanded; //toggles aria expanded on burger menu
+})
+navContainer.children[1].addEventListener("click",e => e.stopPropagation()); //stops burger menu 
+mainPage.addEventListener("click", e => { //when clicking anywhere other than burger menu close burger menu
+    if (burgerMenu.ariaExpanded){ //closes burger menu if its open
+        navContainer.children[1].classList.toggle("burgermenuexpanded");  //closes burgermenu
+        burgerMenu.ariaExpanded = !burgerMenu.ariaExpanded; //toggles aria expanded on burger menu
+    }
+    else return;
 })
 /* ----variables for landing page---- */
 const landingPast = document.getElementById("landingpast");
