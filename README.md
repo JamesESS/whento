@@ -1,4 +1,5 @@
-# [whento](https://jamesess.github.io/whento/) - agency Project
+# [whento](https://jamesess.github.io/whento/) 
+Agency Project by [James](https://github.com/JamesESS) & [Tess](https://github.com/tess-phillips)
 ## Table of contents
 1. [Why](#Why)
 2. [What](#What)
@@ -46,8 +47,11 @@ All of these had little effects or animations and were effected by user input. W
 ## Building
 ***
 We set up a [github projects page](https://github.com/users/JamesESS/projects/2) split the site into smaller issues and got to work.  
-We built out the sections of the page and used placeholder *lorem ipsum* so we could get an idea of how the site would flow.
-We knew we wanted a funky landing page, a page for each team member, and a page for the landing screen. We also knew we wanted to incorporate what's called scroll-snapping, to make interacting with our website enjoyable. Initially one team member created the landing page, with the other creating the form. This way we could work on the same project without accidentally doing the same thing twice over. Once that was complete one team member moved on to creating the navbar, with the other working on the central content pages. As we starting creating the content we realised it would make sense to have an extra content page to pull the rest of the content together. And in order to make the page more interesting we worked in some old and new looking clocks to the team members' pages. Finally we worked on responsiveness. Looking back it would have been better to incorporate responsiveness into the design of the website but we managed to make several media queries, which can be seen in he media.css file, to help our website function on a range of screens.
+We built out the sections of the page and used placeholder *lorem ipsum* so we could get an idea of how the site would flow.  
+We knew we wanted a funky landing page, a page for each team member, and a page for the landing screen. We also knew we wanted to incorporate what's called scroll-snapping, to make interacting with our website enjoyable.  
+Initially one team member created the landing page, with the other creating the form. This way we could work on the same project without accidentally doing the same thing twice over. Once that was complete one team member moved on to creating the navbar, with the other working on the central content pages.  
+As we starting creating the content we realised it would make sense to have an extra content page to pull the rest of the content together. And in order to make the page more interesting we worked in some old and new looking clocks to the team members' pages.  
+Finally we worked on responsiveness. Looking back it would have been better to incorporate responsiveness into the design of the website but we managed to make several media queries, which can be seen in he media.css file, to help our website function on a range of screens.
 ## Debugging
 ***
 - Pretty early on we got some big merge conflicts that caused sections of CSS to repeat. To help avoid this in the future we agreed to try and keep everything in distinct sections, improve our modular CSS and push code regularly so any future conflicts would have less to wade through.  
@@ -86,8 +90,8 @@ were filled in correctly
 - [x] Visit the site at a publicly accessible domain name
     - This can be seen at https://jamesess.github.io/whento/
 - [x] Navigate using keyboard controls
-    - !!!!!!!!!!!!!!!!!!This can be done but not always in the right order/ seeing everything.!!!!!!!!!!!!!!!!!!  
+    - We used tab indexes and semantic html to ensure all interactive elements could be accessed by keyboard 
 - [x] Ensure a screenreader picks up all the relevant content on our site
-    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+    - Again semantic HTML was very important for this. We've also used ARIA labels to provide extra context on interactive elements
 - [x] Use automatic triggers on Github projects
-    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+    - We had our project set up to automatically add new issues when they were created in the repo. We also had some milestone filters set up so we could easily see what aspect of the site different issues related to 
