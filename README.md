@@ -47,7 +47,7 @@ All of these had little effects or animations and were effected by user input. W
 ***
 We set up a [github projects page](https://github.com/users/JamesESS/projects/2) split the site into smaller issues and got to work.  
 We built out the sections of the page and used placeholder *lorem ipsum* so we could get an idea of how the site would flow.
-!! could do with more here (kinda links with checklist??)!!
+We knew we wanted a funky landing page, a page for each team member, and a page for the landing screen. We also knew we wanted to incorporate what's called scroll-snapping, to make interacting with our website enjoyable. Initially one team member created the landing page, with the other creating the form. This way we could work on the same project without accidentally doing the same thing twice over. Once that was complete one team member moved on to creating the navbar, with the other working on the central content pages. As we starting creating the content we realised it would make sense to have an extra content page to pull the rest of the content together. And in order to make the page more interesting we worked in some old and new looking clocks to the team members' pages. Finally we worked on responsiveness. Looking back it would have been better to incorporate responsiveness into the design of the website but we managed to make several media queries, which can be seen in he media.css file, to help our website function on a range of screens.
 ## Debugging
 ***
 - Pretty early on we got some big merge conflicts that caused sections of CSS to repeat. To help avoid this in the future we agreed to try and keep everything in distinct sections, improve our modular CSS and push code regularly so any future conflicts would have less to wade through.  
@@ -69,24 +69,24 @@ There were a few browser incompatibilities between browsers and edge cases with 
 I'm sure there's more that could be done to make sure everybody can easily use & navigate our webpage. It will be intresting to come back and look at how the accessibility can be improved once we've learnt more.
 ## Checklist
 - [x] An introduction to our agency and what we provide
-    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+    - This can be found when hovering on whento? on the landing page. 
 - [x] Information about the members of our team
-    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+    - This can be found on the second and third pages of our website.
 - [x] A way to get in touch if they wanted to use our service
-    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+    - This can be done via our form.
 - [x] Our form needed to have some form of validation to ensure required fields 
 were filled in correctly
-    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+    - This can be seen on our form.
 - [x] See information about each member of the team
-    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+    - This can be found on the second and third pages of our website.
 - [x] Browse the site on mobile, tablet & desktop
-    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+    - This is possible on all screens wider than 300px.
 - [x] Click to navigate to different sections of our page
-    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+    - This can be done via the navbar.
 - [x] Visit the site at a publicly accessible domain name
-    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+    - This can be seen at https://jamesess.github.io/whento/
 - [x] Navigate using keyboard controls
-    - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
+    - !!!!!!!!!!!!!!!!!!This can be done but not always in the right order/ seeing everything.!!!!!!!!!!!!!!!!!!  
 - [x] Ensure a screenreader picks up all the relevant content on our site
     - !!!!!!!!!!!!!!!!!!add proof of this!!!!!!!!!!!!!!!!!!  
 - [x] Use automatic triggers on Github projects
